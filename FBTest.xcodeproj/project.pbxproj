@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E542750A1D3DD4B500B34EBB /* Mergesort.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275091D3DD4B500B34EBB /* Mergesort.m */; };
+		E542750D1D3DDEA300B34EBB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E542750C1D3DDEA300B34EBB /* Utils.m */; };
+		E54275141D3EAC4900B34EBB /* MergesortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275131D3EAC4900B34EBB /* MergesortTests.m */; };
 		E5CE08081D390E2D00772343 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE08071D390E2D00772343 /* main.m */; };
 		E5CE080B1D390E2D00772343 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE080A1D390E2D00772343 /* AppDelegate.m */; };
 		E5CE080E1D390E2D00772343 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE080D1D390E2D00772343 /* ViewController.m */; };
@@ -16,6 +19,7 @@
 		E5CE08191D390E2D00772343 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CE08171D390E2D00772343 /* LaunchScreen.storyboard */; };
 		E5CE08241D390E2E00772343 /* FBTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE08231D390E2E00772343 /* FBTestTests.m */; };
 		E5CE082F1D390E2E00772343 /* FBTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE082E1D390E2E00772343 /* FBTestUITests.m */; };
+		E5CE08401D3AED7500772343 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE083F1D3AED7500772343 /* Heap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E54275081D3DD4B500B34EBB /* Mergesort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mergesort.h; path = alg/Mergesort.h; sourceTree = "<group>"; };
+		E54275091D3DD4B500B34EBB /* Mergesort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Mergesort.m; path = alg/Mergesort.m; sourceTree = "<group>"; };
+		E542750B1D3DDEA300B34EBB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E542750C1D3DDEA300B34EBB /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		E54275131D3EAC4900B34EBB /* MergesortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergesortTests.m; sourceTree = "<group>"; };
 		E5CE08031D390E2D00772343 /* FBTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CE08071D390E2D00772343 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5CE08091D390E2D00772343 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +62,8 @@
 		E5CE082A1D390E2E00772343 /* FBTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CE082E1D390E2E00772343 /* FBTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBTestUITests.m; sourceTree = "<group>"; };
 		E5CE08301D390E2E00772343 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CE083E1D3AED7500772343 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Heap.h; path = alg/Heap.h; sourceTree = "<group>"; };
+		E5CE083F1D3AED7500772343 /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Heap.m; path = alg/Heap.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E542750E1D3DDEB300B34EBB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E542750B1D3DDEA300B34EBB /* Utils.h */,
+				E542750C1D3DDEA300B34EBB /* Utils.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
 		E5CE07FA1D390E2D00772343 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,7 @@
 		E5CE08051D390E2D00772343 /* FBTest */ = {
 			isa = PBXGroup;
 			children = (
+				E5CE083D1D3AED6100772343 /* alg */,
 				E5CE08091D390E2D00772343 /* AppDelegate.h */,
 				E5CE080A1D390E2D00772343 /* AppDelegate.m */,
 				E5CE080C1D390E2D00772343 /* ViewController.h */,
@@ -130,6 +151,7 @@
 			children = (
 				E5CE08231D390E2E00772343 /* FBTestTests.m */,
 				E5CE08251D390E2E00772343 /* Info.plist */,
+				E54275131D3EAC4900B34EBB /* MergesortTests.m */,
 			);
 			path = FBTestTests;
 			sourceTree = "<group>";
@@ -141,6 +163,18 @@
 				E5CE08301D390E2E00772343 /* Info.plist */,
 			);
 			path = FBTestUITests;
+			sourceTree = "<group>";
+		};
+		E5CE083D1D3AED6100772343 /* alg */ = {
+			isa = PBXGroup;
+			children = (
+				E542750E1D3DDEB300B34EBB /* utils */,
+				E5CE083E1D3AED7500772343 /* Heap.h */,
+				E5CE083F1D3AED7500772343 /* Heap.m */,
+				E54275081D3DD4B500B34EBB /* Mergesort.h */,
+				E54275091D3DD4B500B34EBB /* Mergesort.m */,
+			);
+			name = alg;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E542750A1D3DD4B500B34EBB /* Mergesort.m in Sources */,
+				E5CE08401D3AED7500772343 /* Heap.m in Sources */,
 				E5CE080E1D390E2D00772343 /* ViewController.m in Sources */,
 				E5CE080B1D390E2D00772343 /* AppDelegate.m in Sources */,
 				E5CE08081D390E2D00772343 /* main.m in Sources */,
+				E542750D1D3DDEA300B34EBB /* Utils.m in Sources */,
 				E5CE08141D390E2D00772343 /* FBTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54275141D3EAC4900B34EBB /* MergesortTests.m in Sources */,
 				E5CE08241D390E2E00772343 /* FBTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +540,7 @@
 				E5CE08351D390E2E00772343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5CE08361D390E2E00772343 /* Build configuration list for PBXNativeTarget "FBTestTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +549,7 @@
 				E5CE08381D390E2E00772343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5CE08391D390E2E00772343 /* Build configuration list for PBXNativeTarget "FBTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +558,7 @@
 				E5CE083B1D390E2E00772343 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
