@@ -14,4 +14,6 @@
 }
 
 +(void)shuffle:(NSMutableArray *)array;
++(NSMutableArray *)getRandomizedArray;
+
 @end

@@ -21,4 +21,16 @@
     }
 }
 
++(NSMutableArray *)getRandomizedArray
+{
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    for(NSUInteger i = 0; i < 515; i += 7)
+    {
+        [items addObject:[NSNumber numberWithInteger:i]];
+    }
+    
+    [Utils shuffle:items];
+    return items;
+}
+
 @end

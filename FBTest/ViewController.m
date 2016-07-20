@@ -9,6 +9,16 @@
 #import "ViewController.h"
 #import "Heap.h"
 #import "Mergesort.h"
+#import "Quicksort.h"
+#import "Utils.h"
+
+#define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
+ /*
+ mut(asdf);
+ [asdf addObject:@"TEST"];
+ NSLog(@"WHAT");
+ NSLog(@"%@", asdf);
+ */
 
 @interface ViewController ()
 
@@ -20,7 +30,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self testMergesort];
+    [self testQuicksort];
+    
+}
+
+
+-(void)testQuicksort
+{
+    NSLog(@"Quicksort test");
+    Quicksort *q = [[Quicksort alloc] init];
+    NSMutableArray *test = [Utils getRandomizedArray];
+    NSLog(@"%@", test);
+    [q quicksort:test low:0 high:test.count];
+    NSLog(@"%@", test);
+    
     
 }
 
@@ -28,6 +51,8 @@
 {
     Mergesort *sort = [[Mergesort alloc] init];
     [sort test];
+    
+    
 }
 
 -(void)testHeapsort

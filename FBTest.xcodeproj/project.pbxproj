@@ -10,6 +10,9 @@
 		E542750A1D3DD4B500B34EBB /* Mergesort.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275091D3DD4B500B34EBB /* Mergesort.m */; };
 		E542750D1D3DDEA300B34EBB /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E542750C1D3DDEA300B34EBB /* Utils.m */; };
 		E54275141D3EAC4900B34EBB /* MergesortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275131D3EAC4900B34EBB /* MergesortTests.m */; };
+		E54275171D3EB80F00B34EBB /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275161D3EB80F00B34EBB /* Quicksort.m */; };
+		E54275191D3F1C3F00B34EBB /* HeapsortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E54275181D3F1C3F00B34EBB /* HeapsortTests.m */; };
+		E542751B1D3F412E00B34EBB /* QuicksortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E542751A1D3F412E00B34EBB /* QuicksortTests.m */; };
 		E5CE08081D390E2D00772343 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE08071D390E2D00772343 /* main.m */; };
 		E5CE080B1D390E2D00772343 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE080A1D390E2D00772343 /* AppDelegate.m */; };
 		E5CE080E1D390E2D00772343 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5CE080D1D390E2D00772343 /* ViewController.m */; };
@@ -45,6 +48,10 @@
 		E542750B1D3DDEA300B34EBB /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		E542750C1D3DDEA300B34EBB /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		E54275131D3EAC4900B34EBB /* MergesortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergesortTests.m; sourceTree = "<group>"; };
+		E54275151D3EB80F00B34EBB /* Quicksort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quicksort.h; path = alg/Quicksort.h; sourceTree = "<group>"; };
+		E54275161D3EB80F00B34EBB /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Quicksort.m; path = alg/Quicksort.m; sourceTree = "<group>"; };
+		E54275181D3F1C3F00B34EBB /* HeapsortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapsortTests.m; sourceTree = "<group>"; };
+		E542751A1D3F412E00B34EBB /* QuicksortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortTests.m; sourceTree = "<group>"; };
 		E5CE08031D390E2D00772343 /* FBTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CE08071D390E2D00772343 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5CE08091D390E2D00772343 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +159,8 @@
 				E5CE08231D390E2E00772343 /* FBTestTests.m */,
 				E5CE08251D390E2E00772343 /* Info.plist */,
 				E54275131D3EAC4900B34EBB /* MergesortTests.m */,
+				E54275181D3F1C3F00B34EBB /* HeapsortTests.m */,
+				E542751A1D3F412E00B34EBB /* QuicksortTests.m */,
 			);
 			path = FBTestTests;
 			sourceTree = "<group>";
@@ -173,6 +182,8 @@
 				E5CE083F1D3AED7500772343 /* Heap.m */,
 				E54275081D3DD4B500B34EBB /* Mergesort.h */,
 				E54275091D3DD4B500B34EBB /* Mergesort.m */,
+				E54275151D3EB80F00B34EBB /* Quicksort.h */,
+				E54275161D3EB80F00B34EBB /* Quicksort.m */,
 			);
 			name = alg;
 			sourceTree = "<group>";
@@ -310,6 +321,7 @@
 				E542750A1D3DD4B500B34EBB /* Mergesort.m in Sources */,
 				E5CE08401D3AED7500772343 /* Heap.m in Sources */,
 				E5CE080E1D390E2D00772343 /* ViewController.m in Sources */,
+				E54275171D3EB80F00B34EBB /* Quicksort.m in Sources */,
 				E5CE080B1D390E2D00772343 /* AppDelegate.m in Sources */,
 				E5CE08081D390E2D00772343 /* main.m in Sources */,
 				E542750D1D3DDEA300B34EBB /* Utils.m in Sources */,
@@ -323,6 +335,8 @@
 			files = (
 				E54275141D3EAC4900B34EBB /* MergesortTests.m in Sources */,
 				E5CE08241D390E2E00772343 /* FBTestTests.m in Sources */,
+				E54275191D3F1C3F00B34EBB /* HeapsortTests.m in Sources */,
+				E542751B1D3F412E00B34EBB /* QuicksortTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
