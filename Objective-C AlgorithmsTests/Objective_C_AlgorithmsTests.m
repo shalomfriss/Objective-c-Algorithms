@@ -1,0 +1,39 @@
+//
+//  Objective_C_AlgorithmsTests.m
+//  Objective-C AlgorithmsTests
+//
+//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/21/16.
+//  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
+//
+
+#import <XCTest/XCTest.h>
+
+@interface Objective_C_AlgorithmsTests : XCTestCase
+
+@end
+
+@implementation Objective_C_AlgorithmsTests
+
+- (void)setUp {
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testExample {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        // Put the code you want to measure the time of here.
+    }];
+}
+
+@end

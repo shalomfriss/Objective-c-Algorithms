@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E53E445D1D4101AA008A68CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445C1D4101AA008A68CA /* main.m */; };
+		E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445F1D4101AA008A68CA /* AppDelegate.m */; };
+		E53E44631D4101AA008A68CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44621D4101AA008A68CA /* ViewController.m */; };
+		E53E44661D4101AA008A68CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53E44641D4101AA008A68CA /* Main.storyboard */; };
+		E53E44681D4101AA008A68CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E44671D4101AA008A68CA /* Assets.xcassets */; };
+		E53E446B1D4101AA008A68CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53E44691D4101AA008A68CA /* LaunchScreen.storyboard */; };
+		E53E44761D4101AA008A68CA /* Objective_C_AlgorithmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */; };
+		E53E44811D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */; };
+		E53E44951D4101C8008A68CA /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44901D4101C8008A68CA /* Heap.m */; };
+		E53E44961D4101C8008A68CA /* Mergesort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44921D4101C8008A68CA /* Mergesort.m */; };
+		E53E44971D4101C8008A68CA /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44941D4101C8008A68CA /* Quicksort.m */; };
+		E53E449B1D4101D6008A68CA /* HeapsortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44981D4101D6008A68CA /* HeapsortTests.m */; };
+		E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44991D4101D6008A68CA /* MergesortTests.m */; };
+		E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E449A1D4101D6008A68CA /* QuicksortTests.m */; };
+		E53E44A11D4101F0008A68CA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A01D4101F0008A68CA /* Utils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E53E44721D4101AA008A68CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E53E44501D4101A9008A68CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E53E44571D4101A9008A68CA;
+			remoteInfo = "Objective-C Algorithms";
+		};
+		E53E447D1D4101AA008A68CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E53E44501D4101A9008A68CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E53E44571D4101A9008A68CA;
+			remoteInfo = "Objective-C Algorithms";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E53E44581D4101A9008A68CA /* Objective-C Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C Algorithms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53E445C1D4101AA008A68CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E53E445E1D4101AA008A68CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E53E445F1D4101AA008A68CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E53E44611D4101AA008A68CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E53E44621D4101AA008A68CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E53E44651D4101AA008A68CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E53E44671D4101AA008A68CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E53E446A1D4101AA008A68CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E53E446C1D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53E44711D4101AA008A68CA /* Objective-C AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objective-C AlgorithmsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objective_C_AlgorithmsTests.m; sourceTree = "<group>"; };
+		E53E44771D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53E447C1D4101AA008A68CA /* Objective-C AlgorithmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objective-C AlgorithmsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objective_C_AlgorithmsUITests.m; sourceTree = "<group>"; };
+		E53E44821D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E53E448F1D4101C8008A68CA /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		E53E44901D4101C8008A68CA /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
+		E53E44911D4101C8008A68CA /* Mergesort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mergesort.h; sourceTree = "<group>"; };
+		E53E44921D4101C8008A68CA /* Mergesort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mergesort.m; sourceTree = "<group>"; };
+		E53E44931D4101C8008A68CA /* Quicksort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksort.h; sourceTree = "<group>"; };
+		E53E44941D4101C8008A68CA /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quicksort.m; sourceTree = "<group>"; };
+		E53E44981D4101D6008A68CA /* HeapsortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapsortTests.m; sourceTree = "<group>"; };
+		E53E44991D4101D6008A68CA /* MergesortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergesortTests.m; sourceTree = "<group>"; };
+		E53E449A1D4101D6008A68CA /* QuicksortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortTests.m; sourceTree = "<group>"; };
+		E53E449F1D4101F0008A68CA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E53E44A01D4101F0008A68CA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E53E44551D4101A9008A68CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E446E1D4101AA008A68CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E44791D4101AA008A68CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E53E444F1D4101A9008A68CA = {
+			isa = PBXGroup;
+			children = (
+				E53E445A1D4101AA008A68CA /* Objective-C Algorithms */,
+				E53E44741D4101AA008A68CA /* Objective-C AlgorithmsTests */,
+				E53E447F1D4101AA008A68CA /* Objective-C AlgorithmsUITests */,
+				E53E44591D4101A9008A68CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E53E44591D4101A9008A68CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44581D4101A9008A68CA /* Objective-C Algorithms.app */,
+				E53E44711D4101AA008A68CA /* Objective-C AlgorithmsTests.xctest */,
+				E53E447C1D4101AA008A68CA /* Objective-C AlgorithmsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E53E445A1D4101AA008A68CA /* Objective-C Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				E53E448E1D4101C8008A68CA /* alg */,
+				E53E445E1D4101AA008A68CA /* AppDelegate.h */,
+				E53E445F1D4101AA008A68CA /* AppDelegate.m */,
+				E53E44611D4101AA008A68CA /* ViewController.h */,
+				E53E44621D4101AA008A68CA /* ViewController.m */,
+				E53E44641D4101AA008A68CA /* Main.storyboard */,
+				E53E44671D4101AA008A68CA /* Assets.xcassets */,
+				E53E44691D4101AA008A68CA /* LaunchScreen.storyboard */,
+				E53E446C1D4101AA008A68CA /* Info.plist */,
+				E53E445B1D4101AA008A68CA /* Supporting Files */,
+			);
+			path = "Objective-C Algorithms";
+			sourceTree = "<group>";
+		};
+		E53E445B1D4101AA008A68CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E53E445C1D4101AA008A68CA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E53E44741D4101AA008A68CA /* Objective-C AlgorithmsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44981D4101D6008A68CA /* HeapsortTests.m */,
+				E53E44991D4101D6008A68CA /* MergesortTests.m */,
+				E53E449A1D4101D6008A68CA /* QuicksortTests.m */,
+				E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */,
+				E53E44771D4101AA008A68CA /* Info.plist */,
+			);
+			path = "Objective-C AlgorithmsTests";
+			sourceTree = "<group>";
+		};
+		E53E447F1D4101AA008A68CA /* Objective-C AlgorithmsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */,
+				E53E44821D4101AA008A68CA /* Info.plist */,
+			);
+			path = "Objective-C AlgorithmsUITests";
+			sourceTree = "<group>";
+		};
+		E53E448E1D4101C8008A68CA /* alg */ = {
+			isa = PBXGroup;
+			children = (
+				E53E449E1D4101E6008A68CA /* utils */,
+				E53E448F1D4101C8008A68CA /* Heap.h */,
+				E53E44901D4101C8008A68CA /* Heap.m */,
+				E53E44911D4101C8008A68CA /* Mergesort.h */,
+				E53E44921D4101C8008A68CA /* Mergesort.m */,
+				E53E44931D4101C8008A68CA /* Quicksort.h */,
+				E53E44941D4101C8008A68CA /* Quicksort.m */,
+			);
+			path = alg;
+			sourceTree = "<group>";
+		};
+		E53E449E1D4101E6008A68CA /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E53E449F1D4101F0008A68CA /* Utils.h */,
+				E53E44A01D4101F0008A68CA /* Utils.m */,
+			);
+			name = utils;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E53E44571D4101A9008A68CA /* Objective-C Algorithms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E53E44851D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C Algorithms" */;
+			buildPhases = (
+				E53E44541D4101A9008A68CA /* Sources */,
+				E53E44551D4101A9008A68CA /* Frameworks */,
+				E53E44561D4101A9008A68CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Objective-C Algorithms";
+			productName = "Objective-C Algorithms";
+			productReference = E53E44581D4101A9008A68CA /* Objective-C Algorithms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E53E44701D4101AA008A68CA /* Objective-C AlgorithmsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E53E44881D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsTests" */;
+			buildPhases = (
+				E53E446D1D4101AA008A68CA /* Sources */,
+				E53E446E1D4101AA008A68CA /* Frameworks */,
+				E53E446F1D4101AA008A68CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E53E44731D4101AA008A68CA /* PBXTargetDependency */,
+			);
+			name = "Objective-C AlgorithmsTests";
+			productName = "Objective-C AlgorithmsTests";
+			productReference = E53E44711D4101AA008A68CA /* Objective-C AlgorithmsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E53E447B1D4101AA008A68CA /* Objective-C AlgorithmsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E53E448B1D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsUITests" */;
+			buildPhases = (
+				E53E44781D4101AA008A68CA /* Sources */,
+				E53E44791D4101AA008A68CA /* Frameworks */,
+				E53E447A1D4101AA008A68CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E53E447E1D4101AA008A68CA /* PBXTargetDependency */,
+			);
+			name = "Objective-C AlgorithmsUITests";
+			productName = "Objective-C AlgorithmsUITests";
+			productReference = E53E447C1D4101AA008A68CA /* Objective-C AlgorithmsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E53E44501D4101A9008A68CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "FRISS, SHALOM [AG-Contractor/1005]";
+				TargetAttributes = {
+					E53E44571D4101A9008A68CA = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					E53E44701D4101AA008A68CA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E53E44571D4101A9008A68CA;
+					};
+					E53E447B1D4101AA008A68CA = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = E53E44571D4101A9008A68CA;
+					};
+				};
+			};
+			buildConfigurationList = E53E44531D4101A9008A68CA /* Build configuration list for PBXProject "Objective-C Algorithms" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E53E444F1D4101A9008A68CA;
+			productRefGroup = E53E44591D4101A9008A68CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E53E44571D4101A9008A68CA /* Objective-C Algorithms */,
+				E53E44701D4101AA008A68CA /* Objective-C AlgorithmsTests */,
+				E53E447B1D4101AA008A68CA /* Objective-C AlgorithmsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E53E44561D4101A9008A68CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53E446B1D4101AA008A68CA /* LaunchScreen.storyboard in Resources */,
+				E53E44681D4101AA008A68CA /* Assets.xcassets in Resources */,
+				E53E44661D4101AA008A68CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E446F1D4101AA008A68CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E447A1D4101AA008A68CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E53E44541D4101A9008A68CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
+				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
+				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
+				E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */,
+				E53E445D1D4101AA008A68CA /* main.m in Sources */,
+				E53E44A11D4101F0008A68CA /* Utils.m in Sources */,
+				E53E44951D4101C8008A68CA /* Heap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E446D1D4101AA008A68CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */,
+				E53E44761D4101AA008A68CA /* Objective_C_AlgorithmsTests.m in Sources */,
+				E53E449B1D4101D6008A68CA /* HeapsortTests.m in Sources */,
+				E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53E44781D4101AA008A68CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53E44811D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E53E44731D4101AA008A68CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E53E44571D4101A9008A68CA /* Objective-C Algorithms */;
+			targetProxy = E53E44721D4101AA008A68CA /* PBXContainerItemProxy */;
+		};
+		E53E447E1D4101AA008A68CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E53E44571D4101A9008A68CA /* Objective-C Algorithms */;
+			targetProxy = E53E447D1D4101AA008A68CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E53E44641D4101AA008A68CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E53E44651D4101AA008A68CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E53E44691D4101AA008A68CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E53E446A1D4101AA008A68CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E53E44831D4101AA008A68CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E53E44841D4101AA008A68CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E53E44861D4101AA008A68CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Objective-C Algorithms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-Algorithms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E53E44871D4101AA008A68CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Objective-C Algorithms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-Algorithms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E53E44891D4101AA008A68CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Objective-C AlgorithmsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Objective-C Algorithms.app/Objective-C Algorithms";
+			};
+			name = Debug;
+		};
+		E53E448A1D4101AA008A68CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Objective-C AlgorithmsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Objective-C Algorithms.app/Objective-C Algorithms";
+			};
+			name = Release;
+		};
+		E53E448C1D4101AA008A68CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Objective-C AlgorithmsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Objective-C Algorithms";
+			};
+			name = Debug;
+		};
+		E53E448D1D4101AA008A68CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Objective-C AlgorithmsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Objective-C Algorithms";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E53E44531D4101A9008A68CA /* Build configuration list for PBXProject "Objective-C Algorithms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E53E44831D4101AA008A68CA /* Debug */,
+				E53E44841D4101AA008A68CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E53E44851D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C Algorithms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E53E44861D4101AA008A68CA /* Debug */,
+				E53E44871D4101AA008A68CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E53E44881D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E53E44891D4101AA008A68CA /* Debug */,
+				E53E448A1D4101AA008A68CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E53E448B1D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E53E448C1D4101AA008A68CA /* Debug */,
+				E53E448D1D4101AA008A68CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E53E44501D4101A9008A68CA /* Project object */;
+}
