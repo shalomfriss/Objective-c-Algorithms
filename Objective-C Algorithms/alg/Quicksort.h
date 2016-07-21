@@ -14,7 +14,7 @@
 }
 
 //-(void)quicksort:(NSMutableArray *)items low:(NSUInteger)lowi high:(NSUInteger)highi;
--(void)quicksort:(NSMutableArray *)items;
+-(NSMutableArray *)quicksort:(NSMutableArray *)items;
 
 
 @end

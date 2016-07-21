@@ -11,42 +11,47 @@
 @implementation Quicksort
 
 
--(void)quicksort:(NSMutableArray *)items
+-(NSMutableArray *)quicksort:(NSMutableArray *)items
 {
-    
-    NSUInteger pivotIndex = items.count - 1;
+    NSUInteger pivotIndex = (items.count)/2;
     if(pivotIndex <= 0)
     {
-        return;
+        return items;
     }
     
-    id pivot = items[pivotIndex];
+    NSNumber *pivot = items[pivotIndex];
     [items removeObjectAtIndex:pivotIndex];
     
+    NSMutableArray *lowArray = [[NSMutableArray alloc] init];
+    NSMutableArray *highArray = [[NSMutableArray alloc] init];
     
-    NSUInteger low = 0;
-    NSUInteger high = items.count - 1;
-    while(low < high)
+    
+    for(NSUInteger i = 0; i < items.count; i++)
     {
-        while(items[low] < pivot)
+        if(items[i] < pivot)
         {
-            low++;
+            [lowArray addObject:items[i]];
         }
-        while(items[high] > pivot)
+        else
         {
-            high++;
+            [highArray addObject:items[i]];
         }
-        
-        if(low >= high)
-        {
-            break;
-        }
-        
-        [items exchangeObjectAtIndex:low withObjectAtIndex:high];
-        
     }
     
-    [items insertObject:pivot atIndex:low];
+    lowArray = [self quicksort:lowArray];
+    highArray = [self quicksort:highArray];
+    
+    NSMutableArray *results = [[NSMutableArray alloc] init];
+    [results addObjectsFromArray:lowArray];
+    [results addObject:pivot];
+    [results addObjectsFromArray:highArray];
+    
+    
+    //NSLog(@"%@", results);
+    
+    return results;
+    //[items insertObject:pivot atIndex:low];
+    //NSLog(@"Done");
     
     
     
