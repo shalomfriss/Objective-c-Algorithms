@@ -22,6 +22,11 @@
 		E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44991D4101D6008A68CA /* MergesortTests.m */; };
 		E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E449A1D4101D6008A68CA /* QuicksortTests.m */; };
 		E53E44A11D4101F0008A68CA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A01D4101F0008A68CA /* Utils.m */; };
+		E53E44A91D42A8AE008A68CA /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A81D42A8AD008A68CA /* Vertex.m */; };
+		E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44AB1D42A8BA008A68CA /* Edge.m */; };
+		E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44AE1D42AB8B008A68CA /* Queue.m */; };
+		E53E44B21D42AC69008A68CA /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B11D42AC69008A68CA /* Stack.m */; };
+		E53E44B51D42AC82008A68CA /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B41D42AC82008A68CA /* Graph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +74,16 @@
 		E53E449A1D4101D6008A68CA /* QuicksortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortTests.m; sourceTree = "<group>"; };
 		E53E449F1D4101F0008A68CA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		E53E44A01D4101F0008A68CA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		E53E44A71D42A8AD008A68CA /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = structures/graph/Vertex.h; sourceTree = "<group>"; };
+		E53E44A81D42A8AD008A68CA /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vertex.m; path = structures/graph/Vertex.m; sourceTree = "<group>"; };
+		E53E44AA1D42A8BA008A68CA /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Edge.h; path = structures/graph/Edge.h; sourceTree = "<group>"; };
+		E53E44AB1D42A8BA008A68CA /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Edge.m; path = structures/graph/Edge.m; sourceTree = "<group>"; };
+		E53E44AD1D42AB8B008A68CA /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = structures/Queue.h; sourceTree = "<group>"; };
+		E53E44AE1D42AB8B008A68CA /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = structures/Queue.m; sourceTree = "<group>"; };
+		E53E44B01D42AC69008A68CA /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = structures/Stack.h; sourceTree = "<group>"; };
+		E53E44B11D42AC69008A68CA /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stack.m; path = structures/Stack.m; sourceTree = "<group>"; };
+		E53E44B31D42AC82008A68CA /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graph.h; path = structures/graph/Graph.h; sourceTree = "<group>"; };
+		E53E44B41D42AC82008A68CA /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph.m; path = structures/graph/Graph.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +180,7 @@
 		E53E448E1D4101C8008A68CA /* alg */ = {
 			isa = PBXGroup;
 			children = (
+				E53E44A51D41C08C008A68CA /* structures */,
 				E53E449E1D4101E6008A68CA /* utils */,
 				E53E448F1D4101C8008A68CA /* Heap.h */,
 				E53E44901D4101C8008A68CA /* Heap.m */,
@@ -184,6 +200,31 @@
 			);
 			name = utils;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		E53E44A51D41C08C008A68CA /* structures */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44A61D42A897008A68CA /* graph */,
+				E53E44AD1D42AB8B008A68CA /* Queue.h */,
+				E53E44AE1D42AB8B008A68CA /* Queue.m */,
+				E53E44B01D42AC69008A68CA /* Stack.h */,
+				E53E44B11D42AC69008A68CA /* Stack.m */,
+			);
+			name = structures;
+			sourceTree = "<group>";
+		};
+		E53E44A61D42A897008A68CA /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44B31D42AC82008A68CA /* Graph.h */,
+				E53E44B41D42AC82008A68CA /* Graph.m */,
+				E53E44A71D42A8AD008A68CA /* Vertex.h */,
+				E53E44A81D42A8AD008A68CA /* Vertex.m */,
+				E53E44AA1D42A8BA008A68CA /* Edge.h */,
+				E53E44AB1D42A8BA008A68CA /* Edge.m */,
+			);
+			name = graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,9 +357,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53E44B51D42AC82008A68CA /* Graph.m in Sources */,
+				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
+				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
 				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
+				E53E44A91D42A8AE008A68CA /* Vertex.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
+				E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */,
 				E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */,
 				E53E445D1D4101AA008A68CA /* main.m in Sources */,
 				E53E44A11D4101F0008A68CA /* Utils.m in Sources */,
@@ -551,6 +597,7 @@
 				E53E44871D4101AA008A68CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E53E44881D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +606,7 @@
 				E53E448A1D4101AA008A68CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E53E448B1D4101AA008A68CA /* Build configuration list for PBXNativeTarget "Objective-C AlgorithmsUITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +615,7 @@
 				E53E448D1D4101AA008A68CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
