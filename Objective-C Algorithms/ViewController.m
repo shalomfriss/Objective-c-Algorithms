@@ -11,6 +11,9 @@
 #import "Mergesort.h"
 #import "Quicksort.h"
 #import "Utils.h"
+#import "Graph.h"
+#import "Node.h"
+#import "Edge.h"
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -30,10 +33,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self testQuicksort];
+    [self testGraph];
     
 }
 
+
+-(void)testGraph
+{
+    Graph *g = [[Graph alloc] init];
+    [g generateRandom:100];
+}
 
 -(void)testQuicksort
 {

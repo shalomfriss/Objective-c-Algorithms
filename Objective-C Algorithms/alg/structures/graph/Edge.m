@@ -10,4 +10,18 @@
 
 @implementation Edge
 
+-(id)init:(Node*)u v:(Node *)vNode
+{
+    if(self = [super init])
+    {
+        self.u = u;
+        self.v = vNode;
+        self.directed = NO;
+    }
+    
+    return self;
+}
+
+
+
 @end

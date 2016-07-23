@@ -8,15 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Vertex : NSObject
+@interface Node : NSObject
 {
     
 }
 
+-(BOOL)isEqual:(Node *)node;
+
 @property (nonatomic, retain) NSMutableArray *adj;
 @property (assign) float distance;
-@property (nonatomic, retain) Vertex *parent;
+@property (nonatomic, retain) Node *parent;
 @property (nonatomic, assign) BOOL marked;
+@property (nonatomic, assign) id value;
 
 
 @end

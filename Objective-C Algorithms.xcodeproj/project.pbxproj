@@ -22,7 +22,7 @@
 		E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44991D4101D6008A68CA /* MergesortTests.m */; };
 		E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E449A1D4101D6008A68CA /* QuicksortTests.m */; };
 		E53E44A11D4101F0008A68CA /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A01D4101F0008A68CA /* Utils.m */; };
-		E53E44A91D42A8AE008A68CA /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A81D42A8AD008A68CA /* Vertex.m */; };
+		E53E44A91D42A8AE008A68CA /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44A81D42A8AD008A68CA /* Node.m */; };
 		E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44AB1D42A8BA008A68CA /* Edge.m */; };
 		E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44AE1D42AB8B008A68CA /* Queue.m */; };
 		E53E44B21D42AC69008A68CA /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B11D42AC69008A68CA /* Stack.m */; };
@@ -74,8 +74,8 @@
 		E53E449A1D4101D6008A68CA /* QuicksortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortTests.m; sourceTree = "<group>"; };
 		E53E449F1D4101F0008A68CA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		E53E44A01D4101F0008A68CA /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		E53E44A71D42A8AD008A68CA /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = structures/graph/Vertex.h; sourceTree = "<group>"; };
-		E53E44A81D42A8AD008A68CA /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vertex.m; path = structures/graph/Vertex.m; sourceTree = "<group>"; };
+		E53E44A71D42A8AD008A68CA /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = structures/graph/Node.h; sourceTree = "<group>"; };
+		E53E44A81D42A8AD008A68CA /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = structures/graph/Node.m; sourceTree = "<group>"; };
 		E53E44AA1D42A8BA008A68CA /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Edge.h; path = structures/graph/Edge.h; sourceTree = "<group>"; };
 		E53E44AB1D42A8BA008A68CA /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Edge.m; path = structures/graph/Edge.m; sourceTree = "<group>"; };
 		E53E44AD1D42AB8B008A68CA /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = structures/Queue.h; sourceTree = "<group>"; };
@@ -219,8 +219,8 @@
 			children = (
 				E53E44B31D42AC82008A68CA /* Graph.h */,
 				E53E44B41D42AC82008A68CA /* Graph.m */,
-				E53E44A71D42A8AD008A68CA /* Vertex.h */,
-				E53E44A81D42A8AD008A68CA /* Vertex.m */,
+				E53E44A71D42A8AD008A68CA /* Node.h */,
+				E53E44A81D42A8AD008A68CA /* Node.m */,
 				E53E44AA1D42A8BA008A68CA /* Edge.h */,
 				E53E44AB1D42A8BA008A68CA /* Edge.m */,
 			);
@@ -361,7 +361,7 @@
 				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
 				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
 				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
-				E53E44A91D42A8AE008A68CA /* Vertex.m in Sources */,
+				E53E44A91D42A8AE008A68CA /* Node.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
 				E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */,

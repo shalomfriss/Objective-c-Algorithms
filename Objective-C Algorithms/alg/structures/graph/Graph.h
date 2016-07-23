@@ -7,14 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Vertex.h"
+#import "Node.h"
+#import "Edge.h"
 
 @interface Graph : NSObject
 {
     
 }
 
-@property (nonatomic, retain) NSMutableArray *nodes;
--(void)BFS:(Graph *)graph root:(Vertex *)rootNode;
+@property (nonatomic, retain) NSMutableArray<Node *> *nodes;
+@property (nonatomic, retain) NSMutableArray<Edge *> *edges;
+@property (nonatomic, assign) BOOL directed;
+@property (nonatomic, retain) NSMutableDictionary<Node *, Node *> *adjList;
+
+-(void)generateRandom:(NSInteger)num;
+-(void)BFS:(Graph *)graph root:(Node *)rootNode;
 
 @end

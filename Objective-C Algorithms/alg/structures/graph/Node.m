@@ -6,9 +6,9 @@
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
-#import "Vertex.h"
+#import "Node.h"
 
-@implementation Vertex
+@implementation Node
 
 
 -(id)init
@@ -19,9 +19,18 @@
         self.distance = INFINITY;
         self.parent = nil;
         self.marked = NO;
+        self.value = nil;
     }
     return self;
 }
 
+-(BOOL)isEqual:(Node *)node
+{
+    if(self.value == node.value)
+    {
+        return YES;
+    }
+    return NO;
+}
 
 @end

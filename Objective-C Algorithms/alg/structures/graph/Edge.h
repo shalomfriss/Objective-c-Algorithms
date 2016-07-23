@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Node.h"
 
 @interface Edge : NSObject
+{
+    
+}
+
+@property (nonatomic, retain) Node *u;
+@property (nonatomic, retain) Node *v;
+@property (nonatomic, assign) BOOL directed;
 
 @end
