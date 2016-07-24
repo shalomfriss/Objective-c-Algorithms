@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+
+#define DEBUG_MODE YES
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));

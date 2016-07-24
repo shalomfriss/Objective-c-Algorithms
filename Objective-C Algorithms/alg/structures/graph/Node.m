@@ -15,11 +15,12 @@
 {
     if(self = [super init])
     {
-        self.adj = [[NSMutableArray alloc] init];
         self.distance = INFINITY;
         self.parent = nil;
         self.marked = NO;
         self.value = nil;
+        self.adjacent = [[NSMutableArray<Node *> alloc] init];
+        
     }
     return self;
 }

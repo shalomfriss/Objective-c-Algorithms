@@ -19,7 +19,6 @@
         self.nodes = [[NSMutableArray<Node *> alloc] init];
         self.edges = [[NSMutableArray<Edge *> alloc] init];
         self.directed = NO;
-        self.adjList = [[NSMutableDictionary<Node *, Node *> alloc] init];
     }
     
     return self;
@@ -38,28 +37,54 @@
         }
     }
     
-    [self.edges addObject:e];
-    [self.adjList setObject:e.u forKey:e.v];
-    [self.adjList setObject:e.v forKey:e.u];
     
-    /*
-    self.adjList = [self.adjList keysSortedByValueUsingComparator: ^(id obj1, id obj2) {
+    [self.edges addObject:e];
+    [self.nodes addObject:e.u];
+    [self.nodes addObject:e.v];
+    
+    [e.u.adjacent addObject:e.v];
+    [e.v.adjacent addObject:e.u];
+    
+}
+
+-(void)generateRandom:(NSInteger)num
+{
+    
+    //[NSNumber numberWithFloat:rand() % 100]
+    NSInteger last = 0;
+    for(NSInteger i = 0; i < num; i += 2)
+    {
+        Node *v = [[Node alloc] init];
+        Node *u = [[Node alloc] init];
         
-        Node *node1 = (Node *)obj1;
-        Node *node2 = (Node *)obj2;
+        v.value = [NSNumber numberWithFloat:i];
+        u.value = [NSNumber numberWithFloat:i + 1];
         
-        if (node1.value > node2.value) {
-            
-            return (NSComparisonResult)NSOrderedDescending;
+        NSLog(@"Adding node: %tu %tu", i, i+1);
+        Edge *e = [[Edge alloc] init];
+        e.u = u;
+        e.v = v;
+        [self addEdge:e];
+    }
+    
+   
+    
+}
+
+-(void)show
+{
+    for(NSInteger i = 0; i < self.nodes.count; i++)
+    {
+        NSString *str = @"";
+        Node *e = self.nodes[i];
+        str = [str stringByAppendingFormat:@"%d: ",(int)e.value];
+        for(NSInteger j = 0; j < e.adjacent.count; j++)
+        {
+            Node *x = e.adjacent[j];
+            [str stringByAppendingFormat:@"%d",(int)x.value];
         }
-        else {
-            
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        
-        return (NSComparisonResult)NSOrderedSame;
-    }];
-     */
+        NSLog(@"%@", str);
+    }
 }
 
 -(void)removeEdge:(Edge *)e
@@ -83,68 +108,13 @@
     
 }
 
--(void)generateRandom:(NSInteger)num
-{
-    for(NSInteger i = 0; i < num; i++)
-    {
-        Node *v = [[Node alloc] init];
-        Node *u = [[Node alloc] init];
-        v.value = [NSNumber numberWithFloat:rand()*1000.0];
-        u.value = [NSNumber numberWithFloat:rand()*1000.0];
-        
-        Edge *e = [[Edge alloc] init];
-        e.u = u;
-        e.v = v;
-        [self addEdge:e];
-    }
-    
-    NSLog(@"%@", self.edges);
-}
 
--(void)show
+-(void)processNode:(Node *)node
 {
     
 }
 
--(void)DFS:(Graph *)graph root:(Node *)rootNode
-{
-    for(NSUInteger i = 0; i < graph.nodes.count; i++)
-    {
-        Node *v = graph.nodes[i];
-        //v.distance = INFINITY;
-        v.marked = NO;
-        v.parent = nil;
-    }
-    
-    //rootNode.distance = 0;
-    rootNode.marked = YES;
-    rootNode.parent = nil;
-    
-    Stack *S = [[Stack alloc] init];
-    [S push:rootNode];
-    
-    while([S hasItems])
-    {
-        Node *item = (Node *)[S pop];
-        if(item.marked == NO)
-        {
-            item.marked = YES;
-            NSMutableArray *adj = item.adj;
-            for(NSUInteger j = 0;j < adj.count; j++)
-            {
-                Node *adjItem = (Node *)adj[j];
-                if(adjItem.marked == NO)
-                {
-                    [S push:adjItem];
-                }
-            }
-        }
-        
-    }
-}
-
-
--(void)BFS:(Graph *)graph root:(Node *)rootNode
+-(void)BFS:(Graph *)graph root:(Node *)rootNode nodeToFind:(Node *)findNode
 {
     
     for(NSUInteger i = 0; i < graph.nodes.count; i++)
@@ -166,7 +136,13 @@
     while([Q hasItems])
     {
         Node *item = (Node *)[Q pop];
-        NSMutableArray *adj = item.adj;
+        if(item.value == findNode.value)
+        {
+            NSLog(@"Found NODE!!!");
+            return;
+        }
+        
+        NSMutableArray *adj = item.adjacent;
         for(NSUInteger i = 0; i < adj.count; i++)
         {
             Node *adjItem = (Node *)adj[i];
@@ -183,5 +159,46 @@
     }
     
 }
+
+-(void)DFS:(Graph *)graph root:(Node *)rootNode nodeToFind:(Node *)findNode
+{
+    //Setup the items
+    for(NSUInteger i = 0; i < graph.nodes.count; i++)
+    {
+        Node *v = graph.nodes[i];
+        //v.distance = INFINITY;
+        v.marked = NO;
+        v.parent = nil;
+    }
+    
+    //rootNode.distance = 0;
+    rootNode.marked = YES;
+    rootNode.parent = nil;
+    
+    Stack *S = [[Stack alloc] init];
+    [S push:rootNode];
+    
+    while([S hasItems])
+    {
+        Node *item = (Node *)[S pop];
+        if(item.marked == NO)
+        {
+            item.marked = YES;
+            NSMutableArray *adj = item.adjacent;
+            for(NSUInteger j = 0;j < adj.count; j++)
+            {
+                Node *adjItem = (Node *)adj[j];
+                if(adjItem.marked == NO)
+                {
+                    [S push:adjItem];
+                }
+            }
+        }
+        
+    }
+}
+
+
+
 
 @end

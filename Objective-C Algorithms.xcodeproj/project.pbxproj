@@ -27,6 +27,7 @@
 		E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44AE1D42AB8B008A68CA /* Queue.m */; };
 		E53E44B21D42AC69008A68CA /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B11D42AC69008A68CA /* Stack.m */; };
 		E53E44B51D42AC82008A68CA /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B41D42AC82008A68CA /* Graph.m */; };
+		E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B71D4331CB008A68CA /* DebugUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		E53E44B11D42AC69008A68CA /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stack.m; path = structures/Stack.m; sourceTree = "<group>"; };
 		E53E44B31D42AC82008A68CA /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graph.h; path = structures/graph/Graph.h; sourceTree = "<group>"; };
 		E53E44B41D42AC82008A68CA /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph.m; path = structures/graph/Graph.m; sourceTree = "<group>"; };
+		E53E44B61D4331CB008A68CA /* DebugUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUtils.h; sourceTree = "<group>"; };
+		E53E44B71D4331CB008A68CA /* DebugUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 		E53E445A1D4101AA008A68CA /* Objective-C Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				E53E44B61D4331CB008A68CA /* DebugUtils.h */,
+				E53E44B71D4331CB008A68CA /* DebugUtils.m */,
 				E53E448E1D4101C8008A68CA /* alg */,
 				E53E445E1D4101AA008A68CA /* AppDelegate.h */,
 				E53E445F1D4101AA008A68CA /* AppDelegate.m */,
@@ -360,6 +365,7 @@
 				E53E44B51D42AC82008A68CA /* Graph.m in Sources */,
 				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
 				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
+				E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */,
 				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
 				E53E44A91D42A8AE008A68CA /* Node.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,

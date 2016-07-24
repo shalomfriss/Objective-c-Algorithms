@@ -23,6 +23,8 @@
  NSLog(@"%@", asdf);
  */
 
+
+
 @interface ViewController ()
 
 @end
@@ -40,8 +42,13 @@
 
 -(void)testGraph
 {
+    trace("testing");
     Graph *g = [[Graph alloc] init];
+    trace("Made graph");
     [g generateRandom:100];
+    //[g show];
+    
+    
 }
 
 -(void)testQuicksort
