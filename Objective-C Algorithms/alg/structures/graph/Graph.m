@@ -50,21 +50,78 @@
 -(void)generateRandom:(NSInteger)num
 {
     
+    
     //[NSNumber numberWithFloat:rand() % 100]
-    NSInteger last = 0;
-    for(NSInteger i = 0; i < num; i += 2)
+    Node *v;
+    Node *u;
+    
+    u = [[Node alloc] init];
+    u.value = 100 + 1;
+    
+    NSMutableArray<Node *> *all = [[NSMutableArray<Node *> alloc] init];
+
+    
+    
+    NSMutableArray<Node *> *last = [[NSMutableArray<Node *> alloc] init];
+    [last addObject:u];
+    
+    for(NSInteger i = 1; i < num; i++)
     {
-        Node *v = [[Node alloc] init];
-        Node *u = [[Node alloc] init];
         
-        v.value = [NSNumber numberWithFloat:i];
-        u.value = [NSNumber numberWithFloat:i + 1];
+        NSMutableArray<Node *> *newLast = [[NSMutableArray<Node *> alloc] init];
         
-        NSLog(@"Adding node: %tu %tu", i, i+1);
+        for(NSInteger k = 0; k < last.count; k++)
+        {
+            u = [last objectAtIndex:k];
+            for(NSInteger j = 1; j < 1 + 6 * rand(); j++)
+            {
+                v = [[Node alloc] init];
+                v.value = (i+1)*100 + k*10 + j;
+                
+                Edge *e = [[Edge alloc] init];
+                e.u = u;
+                e.v = v;
+                [self addEdge:e];
+                NSLog(@"Adding node: %tu %tu", u.value, v.value);
+                
+                [newLast addObject:v];
+            }
+        }
+        
+        last = newLast;
+        /*
+        v = [[Node alloc] init];
+        v.value = 100 + j;
+        
         Edge *e = [[Edge alloc] init];
         e.u = u;
         e.v = v;
         [self addEdge:e];
+        NSLog(@"Adding node: %tu %tu", u.value, v.value);
+        */
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
+        Node *rando = [[Node alloc] init];
+        rando.value = rand() * num;
+        Edge *ex = [[Edge alloc] init];
+        ex.u = u;
+        ex.v = rando;
+        [self addEdge:ex];
+        
+        Edge *ex2 = [[Edge alloc] init];
+        ex2.u = v;
+        ex2.v = rando;
+        [self addEdge:ex2];
+        */
+        
+        
     }
     
    
@@ -116,6 +173,10 @@
 
 -(void)BFS:(Graph *)graph root:(Node *)rootNode nodeToFind:(Node *)findNode
 {
+    if(rootNode == nil)
+    {
+        rootNode = self.nodes[0];
+    }
     
     for(NSUInteger i = 0; i < graph.nodes.count; i++)
     {
@@ -136,6 +197,9 @@
     while([Q hasItems])
     {
         Node *item = (Node *)[Q pop];
+        
+        NSLog(@"check: %tu - %tu", findNode.value, item.value);
+        
         if(item.value == findNode.value)
         {
             NSLog(@"Found NODE!!!");

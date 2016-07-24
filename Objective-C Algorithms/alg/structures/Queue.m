@@ -28,8 +28,8 @@
 {
     if(items.count > 0)
     {
-        id item = [items objectAtIndex:0];
-        [items removeObjectAtIndex:0];
+        id item = [items objectAtIndex:items.count - 1];
+        [items removeObjectAtIndex:items.count - 1];
         return item;
     }
     

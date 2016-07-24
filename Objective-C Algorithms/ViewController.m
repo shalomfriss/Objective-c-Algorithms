@@ -45,10 +45,12 @@
     trace("testing");
     Graph *g = [[Graph alloc] init];
     trace("Made graph");
-    [g generateRandom:100];
+    [g generateRandom:7];
     //[g show];
     
-    
+    Node *node = [[Node alloc] init];
+    node.value = 202;
+    [g BFS:g root:nil nodeToFind:node];
 }
 
 -(void)testQuicksort

@@ -18,7 +18,7 @@
         self.distance = INFINITY;
         self.parent = nil;
         self.marked = NO;
-        self.value = nil;
+        self.value = -1;
         self.adjacent = [[NSMutableArray<Node *> alloc] init];
         
     }

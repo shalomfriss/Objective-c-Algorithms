@@ -18,7 +18,7 @@
 @property (assign) float distance;
 @property (nonatomic, retain) Node *parent;
 @property (nonatomic, assign) BOOL marked;
-@property (nonatomic, assign) id value;
+@property (nonatomic, assign) NSInteger value;
 @property (nonatomic, retain) NSMutableArray<Node *> *adjacent;
 
 
