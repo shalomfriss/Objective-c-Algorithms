@@ -1,20 +1,20 @@
 //
-//  QuicksortTests.m
-//  FBTest
+//  BubbleSortTests.m
+//  Objective-C Algorithms
 //
-//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/20/16.
+//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/27/16.
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "Quicksort.h"
+#import "BubbleSort.h"
 #import "Utils.h"
 
-@interface QuicksortTests : XCTestCase
+@interface BubbleSortTests : XCTestCase
 
 @end
 
-@implementation QuicksortTests
+@implementation BubbleSortTests
 
 - (void)setUp {
     [super setUp];
@@ -26,13 +26,11 @@
     [super tearDown];
 }
 
--(void)testQuicksort
+- (void)testBubbleSort
 {
     
-    Quicksort *sort = [[Quicksort alloc] init];
+    BubbleSort *sort = [[BubbleSort alloc] init];
     NSMutableArray *items = [Utils getRandomizedArray];
-    
-    
     
     __block NSMutableArray *sorted;
     [self measureBlock:^{
@@ -63,7 +61,6 @@
     XCTAssert(YES);
     
 }
-
 
 
 @end

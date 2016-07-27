@@ -1,20 +1,20 @@
 //
-//  QuicksortTests.m
-//  FBTest
+//  InsertionSortTests.m
+//  Objective-C Algorithms
 //
-//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/20/16.
+//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/27/16.
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "Quicksort.h"
+#import "InsertionSort.h"
 #import "Utils.h"
 
-@interface QuicksortTests : XCTestCase
+@interface InsertionSortTests : XCTestCase
 
 @end
 
-@implementation QuicksortTests
+@implementation InsertionSortTests
 
 - (void)setUp {
     [super setUp];
@@ -26,12 +26,11 @@
     [super tearDown];
 }
 
--(void)testQuicksort
+- (void)testInsertionSort
 {
     
-    Quicksort *sort = [[Quicksort alloc] init];
+    InsertionSort *sort = [[InsertionSort alloc] init];
     NSMutableArray *items = [Utils getRandomizedArray];
-    
     
     
     __block NSMutableArray *sorted;
@@ -63,7 +62,6 @@
     XCTAssert(YES);
     
 }
-
 
 
 @end

@@ -58,7 +58,7 @@
     u = [[Node alloc] init];
     u.value = 100 + 1;
     
-    NSMutableArray<Node *> *all = [[NSMutableArray<Node *> alloc] init];
+    //NSMutableArray<Node *> *all = [[NSMutableArray<Node *> alloc] init];
 
     
     

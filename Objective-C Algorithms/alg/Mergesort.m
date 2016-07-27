@@ -12,58 +12,34 @@
 
 @implementation Mergesort
 
--(void)test
-{
-    NSMutableArray *items = [[NSMutableArray alloc] init];
-    for(NSUInteger i = 0; i < 515; i += 7)
-    {
-        [items addObject:[NSNumber numberWithInteger:i]];
-    }
-    
-    
-    [Utils shuffle:items];
-    NSLog(@"%lu", items.count);
-    NSLog(@"%@", items);
-    
-    NSArray *result = [self mergesort:[items copy]];
-    
-    NSLog(@"%lu", items.count);
-    NSLog(@"%@", result);
-    
-    
-}
 
 
 
--(NSArray *)mergesort:(NSArray *)items
+-(NSMutableArray *)sort:(NSMutableArray *)items
 {
     
     if(items.count == 1)
     {
-        NSArray *res = [NSArray arrayWithObjects:items[0], nil];
-        return res;
+        return items;
     }
     
-    NSArray *arr1 = [items subarrayWithRange:NSMakeRange(0, items.count/2)];
-    NSArray *arr2 = [items subarrayWithRange:NSMakeRange(items.count/2, items.count - arr1.count)];
+    NSMutableArray *arr1 = [[items subarrayWithRange:NSMakeRange(0, items.count/2)] mutableCopy];
+    NSMutableArray *arr2 = [[items subarrayWithRange:NSMakeRange(items.count/2, items.count - arr1.count)] mutableCopy];
     
-    //NSLog(@"%@ %@", arr1, arr2);
-    arr1 = [self mergesort:arr1];
-    arr2 = [self mergesort:arr2];
-    NSArray *result = [self merge:arr1 withArray:arr2];
+    arr1 = [self sort:arr1];
+    arr2 = [self sort:arr2];
+    NSMutableArray *result = [self merge:arr1 withArray:arr2];
     return result;
-    
     
 }
 
--(NSArray *)merge:(NSArray *)array1 withArray:(NSArray *)array2
+-(NSMutableArray *)merge:(NSMutableArray *)array1 withArray:(NSMutableArray *)array2
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     NSMutableArray *a1 = [NSMutableArray arrayWithArray:array1];
     NSMutableArray *a2 = [NSMutableArray arrayWithArray:array2];
     
     
-    //NSLog(@"%lu - %lu", array1.count, array2.count);
     
     while(a1.count > 0 || a2.count > 0)
     {
@@ -90,15 +66,9 @@
             [a2 removeObjectAtIndex:0];
         }
         
-        //NSLog(@"%lu - %lu", i, result[i]);
     }
     
-    /*
-    NSLog(@"---------------------------------------------------");
-    NSLog(@"%@ %@", array1, array2);
-    NSLog(@"%@", result);
-    */
-     
+    
     return [result copy];
     
 }

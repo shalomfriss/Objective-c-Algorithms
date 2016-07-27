@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E53129E21D49161D009C8C12 /* SelectionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129E11D49161D009C8C12 /* SelectionSort.m */; };
+		E53129E61D491A80009C8C12 /* SelectionSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129E51D491A80009C8C12 /* SelectionSortTests.m */; };
+		E53129E81D492C80009C8C12 /* InsertionSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129E71D492C80009C8C12 /* InsertionSortTests.m */; };
+		E53129EB1D4935C3009C8C12 /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129EA1D4935C3009C8C12 /* BubbleSort.m */; };
+		E53129ED1D493641009C8C12 /* BubbleSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129EC1D493641009C8C12 /* BubbleSortTests.m */; };
+		E53129F01D4939C0009C8C12 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129EF1D4939C0009C8C12 /* ShellSort.m */; };
+		E53129F21D493E5D009C8C12 /* ShellSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129F11D493E5D009C8C12 /* ShellSortTests.m */; };
 		E53E445D1D4101AA008A68CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445C1D4101AA008A68CA /* main.m */; };
 		E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445F1D4101AA008A68CA /* AppDelegate.m */; };
 		E53E44631D4101AA008A68CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44621D4101AA008A68CA /* ViewController.m */; };
 		E53E44661D4101AA008A68CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53E44641D4101AA008A68CA /* Main.storyboard */; };
 		E53E44681D4101AA008A68CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E44671D4101AA008A68CA /* Assets.xcassets */; };
 		E53E446B1D4101AA008A68CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53E44691D4101AA008A68CA /* LaunchScreen.storyboard */; };
-		E53E44761D4101AA008A68CA /* Objective_C_AlgorithmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */; };
-		E53E44811D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */; };
 		E53E44951D4101C8008A68CA /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44901D4101C8008A68CA /* Heap.m */; };
 		E53E44961D4101C8008A68CA /* Mergesort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44921D4101C8008A68CA /* Mergesort.m */; };
 		E53E44971D4101C8008A68CA /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44941D4101C8008A68CA /* Quicksort.m */; };
@@ -28,6 +33,8 @@
 		E53E44B21D42AC69008A68CA /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B11D42AC69008A68CA /* Stack.m */; };
 		E53E44B51D42AC82008A68CA /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B41D42AC82008A68CA /* Graph.m */; };
 		E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B71D4331CB008A68CA /* DebugUtils.m */; };
+		E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BB1D46C96E008A68CA /* BitUtils.m */; };
+		E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BE1D47F291008A68CA /* InsertionSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E53129DF1D48100A009C8C12 /* SortProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortProtocol.h; sourceTree = "<group>"; };
+		E53129E01D49161D009C8C12 /* SelectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionSort.h; sourceTree = "<group>"; };
+		E53129E11D49161D009C8C12 /* SelectionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionSort.m; sourceTree = "<group>"; };
+		E53129E51D491A80009C8C12 /* SelectionSortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionSortTests.m; sourceTree = "<group>"; };
+		E53129E71D492C80009C8C12 /* InsertionSortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertionSortTests.m; sourceTree = "<group>"; };
+		E53129E91D4935C3009C8C12 /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		E53129EA1D4935C3009C8C12 /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		E53129EC1D493641009C8C12 /* BubbleSortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortTests.m; sourceTree = "<group>"; };
+		E53129EE1D4939C0009C8C12 /* ShellSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
+		E53129EF1D4939C0009C8C12 /* ShellSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
+		E53129F11D493E5D009C8C12 /* ShellSortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellSortTests.m; sourceTree = "<group>"; };
 		E53E44581D4101A9008A68CA /* Objective-C Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C Algorithms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53E445C1D4101AA008A68CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E53E445E1D4101AA008A68CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,10 +77,8 @@
 		E53E446A1D4101AA008A68CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53E446C1D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53E44711D4101AA008A68CA /* Objective-C AlgorithmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objective-C AlgorithmsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objective_C_AlgorithmsTests.m; sourceTree = "<group>"; };
 		E53E44771D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53E447C1D4101AA008A68CA /* Objective-C AlgorithmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Objective-C AlgorithmsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Objective_C_AlgorithmsUITests.m; sourceTree = "<group>"; };
 		E53E44821D4101AA008A68CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53E448F1D4101C8008A68CA /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
 		E53E44901D4101C8008A68CA /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
@@ -87,6 +103,10 @@
 		E53E44B41D42AC82008A68CA /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph.m; path = structures/graph/Graph.m; sourceTree = "<group>"; };
 		E53E44B61D4331CB008A68CA /* DebugUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUtils.h; sourceTree = "<group>"; };
 		E53E44B71D4331CB008A68CA /* DebugUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUtils.m; sourceTree = "<group>"; };
+		E53E44BA1D46C96E008A68CA /* BitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitUtils.h; path = bit/BitUtils.h; sourceTree = "<group>"; };
+		E53E44BB1D46C96E008A68CA /* BitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitUtils.m; path = bit/BitUtils.m; sourceTree = "<group>"; };
+		E53E44BD1D47F291008A68CA /* InsertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
+		E53E44BE1D47F291008A68CA /* InsertionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertionSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +134,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E53129DE1D480FC8009C8C12 /* sorting */ = {
+			isa = PBXGroup;
+			children = (
+				E53129DF1D48100A009C8C12 /* SortProtocol.h */,
+				E53E44911D4101C8008A68CA /* Mergesort.h */,
+				E53E44921D4101C8008A68CA /* Mergesort.m */,
+				E53E44931D4101C8008A68CA /* Quicksort.h */,
+				E53E44941D4101C8008A68CA /* Quicksort.m */,
+				E53129E01D49161D009C8C12 /* SelectionSort.h */,
+				E53129E11D49161D009C8C12 /* SelectionSort.m */,
+				E53E44BD1D47F291008A68CA /* InsertionSort.h */,
+				E53E44BE1D47F291008A68CA /* InsertionSort.m */,
+				E53129E91D4935C3009C8C12 /* BubbleSort.h */,
+				E53129EA1D4935C3009C8C12 /* BubbleSort.m */,
+				E53129EE1D4939C0009C8C12 /* ShellSort.h */,
+				E53129EF1D4939C0009C8C12 /* ShellSort.m */,
+			);
+			name = sorting;
+			sourceTree = "<group>";
+		};
 		E53E444F1D4101A9008A68CA = {
 			isa = PBXGroup;
 			children = (
@@ -164,10 +204,13 @@
 		E53E44741D4101AA008A68CA /* Objective-C AlgorithmsTests */ = {
 			isa = PBXGroup;
 			children = (
-				E53E44981D4101D6008A68CA /* HeapsortTests.m */,
 				E53E44991D4101D6008A68CA /* MergesortTests.m */,
 				E53E449A1D4101D6008A68CA /* QuicksortTests.m */,
-				E53E44751D4101AA008A68CA /* Objective_C_AlgorithmsTests.m */,
+				E53E44981D4101D6008A68CA /* HeapsortTests.m */,
+				E53129E51D491A80009C8C12 /* SelectionSortTests.m */,
+				E53129E71D492C80009C8C12 /* InsertionSortTests.m */,
+				E53129EC1D493641009C8C12 /* BubbleSortTests.m */,
+				E53129F11D493E5D009C8C12 /* ShellSortTests.m */,
 				E53E44771D4101AA008A68CA /* Info.plist */,
 			);
 			path = "Objective-C AlgorithmsTests";
@@ -176,7 +219,6 @@
 		E53E447F1D4101AA008A68CA /* Objective-C AlgorithmsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E53E44801D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m */,
 				E53E44821D4101AA008A68CA /* Info.plist */,
 			);
 			path = "Objective-C AlgorithmsUITests";
@@ -185,14 +227,9 @@
 		E53E448E1D4101C8008A68CA /* alg */ = {
 			isa = PBXGroup;
 			children = (
+				E53129DE1D480FC8009C8C12 /* sorting */,
 				E53E44A51D41C08C008A68CA /* structures */,
 				E53E449E1D4101E6008A68CA /* utils */,
-				E53E448F1D4101C8008A68CA /* Heap.h */,
-				E53E44901D4101C8008A68CA /* Heap.m */,
-				E53E44911D4101C8008A68CA /* Mergesort.h */,
-				E53E44921D4101C8008A68CA /* Mergesort.m */,
-				E53E44931D4101C8008A68CA /* Quicksort.h */,
-				E53E44941D4101C8008A68CA /* Quicksort.m */,
 			);
 			path = alg;
 			sourceTree = "<group>";
@@ -210,6 +247,9 @@
 		E53E44A51D41C08C008A68CA /* structures */ = {
 			isa = PBXGroup;
 			children = (
+				E53E448F1D4101C8008A68CA /* Heap.h */,
+				E53E44901D4101C8008A68CA /* Heap.m */,
+				E53E44B91D46C952008A68CA /* bit */,
 				E53E44A61D42A897008A68CA /* graph */,
 				E53E44AD1D42AB8B008A68CA /* Queue.h */,
 				E53E44AE1D42AB8B008A68CA /* Queue.m */,
@@ -230,6 +270,15 @@
 				E53E44AB1D42A8BA008A68CA /* Edge.m */,
 			);
 			name = graph;
+			sourceTree = "<group>";
+		};
+		E53E44B91D46C952008A68CA /* bit */ = {
+			isa = PBXGroup;
+			children = (
+				E53E44BA1D46C96E008A68CA /* BitUtils.h */,
+				E53E44BB1D46C96E008A68CA /* BitUtils.m */,
+			);
+			name = bit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,17 +411,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E53129F01D4939C0009C8C12 /* ShellSort.m in Sources */,
 				E53E44B51D42AC82008A68CA /* Graph.m in Sources */,
+				E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */,
 				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
 				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
 				E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */,
 				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
 				E53E44A91D42A8AE008A68CA /* Node.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
+				E53129EB1D4935C3009C8C12 /* BubbleSort.m in Sources */,
+				E53129E21D49161D009C8C12 /* SelectionSort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
 				E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */,
 				E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */,
 				E53E445D1D4101AA008A68CA /* main.m in Sources */,
+				E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */,
 				E53E44A11D4101F0008A68CA /* Utils.m in Sources */,
 				E53E44951D4101C8008A68CA /* Heap.m in Sources */,
 			);
@@ -383,9 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */,
-				E53E44761D4101AA008A68CA /* Objective_C_AlgorithmsTests.m in Sources */,
+				E53129E81D492C80009C8C12 /* InsertionSortTests.m in Sources */,
 				E53E449B1D4101D6008A68CA /* HeapsortTests.m in Sources */,
 				E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */,
+				E53129E61D491A80009C8C12 /* SelectionSortTests.m in Sources */,
+				E53129F21D493E5D009C8C12 /* ShellSortTests.m in Sources */,
+				E53129ED1D493641009C8C12 /* BubbleSortTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +450,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E53E44811D4101AA008A68CA /* Objective_C_AlgorithmsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Objective-C Algorithms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-Algorithms";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -533,6 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Objective-C Algorithms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-Algorithms";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -544,6 +602,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Objective-C AlgorithmsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Objective-C Algorithms.app/Objective-C Algorithms";
@@ -556,6 +615,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Objective-C AlgorithmsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Objective-C Algorithms.app/Objective-C Algorithms";
@@ -567,6 +627,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Objective-C AlgorithmsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = "Objective-C Algorithms";
@@ -578,6 +639,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Objective-C AlgorithmsUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.knucklemedia.Objective-C-AlgorithmsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = "Objective-C Algorithms";

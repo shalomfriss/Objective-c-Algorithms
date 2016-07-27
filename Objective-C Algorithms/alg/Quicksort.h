@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SortProtocol.h"
 
-@interface Quicksort : NSObject
+@interface Quicksort : NSObject <Sorter>
 {
     
 }
 
 //-(void)quicksort:(NSMutableArray *)items low:(NSUInteger)lowi high:(NSUInteger)highi;
--(NSMutableArray *)quicksort:(NSMutableArray *)items;
+-(NSMutableArray *)sort:(NSMutableArray *)items;
 
 
 @end

@@ -10,10 +10,13 @@
 #import "Heap.h"
 #import "Mergesort.h"
 #import "Quicksort.h"
+#import "SelectionSort.h"
 #import "Utils.h"
 #import "Graph.h"
 #import "Node.h"
 #import "Edge.h"
+
+#import "BitUtils.h"
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -35,10 +38,73 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self testGraph];
+    //[self testGraph];
+    //[self testBit];
+    //[self testQuicksort];
+    //[self testSelectionSort];
+    [self testInsertionSort];
     
 }
 
+-(void)testInsertionSort
+{
+    
+}
+
+
+-(void)testSelectionSort
+{
+    NSLog(@"Testing Selection sort");
+    
+    SelectionSort *sort = [[SelectionSort alloc] init];
+    NSMutableArray *test = [Utils getRandomizedArray];
+    NSMutableArray *sorted = [sort sort:test];
+    
+    NSLog(@"%@", test);
+    NSLog(@"%@", sorted);
+    
+    if(sorted.count != test.count)
+    {
+        //XCTAssertTrue(NO);
+        NSLog(@"BAD");
+        /*
+        NSLog(@"%@", test);
+        NSLog(@"%@", sorted);
+        NSLog(@"%lu - %lu", test.count, sorted.count);
+         */
+    }
+    //NSLog(@"%lu - %lu", test.count, sorted.count);
+    
+    for(NSUInteger i = 1; i < sorted.count; i++)
+    {
+        if(sorted[i - 1] > sorted[i])
+        {
+            NSLog(@"%lu - %lu", i - 1, i);
+            NSLog(@"%@ - %@", sorted[i - 1], sorted[i]);
+        }
+    }
+    
+}
+
+-(void)testBit
+{
+    
+    
+    
+    NSMutableArray *res = [BitUtils convertToBinary: 14];
+    NSMutableArray *res2 = [BitUtils convertToBinary: 32];
+    NSMutableArray *res3 = [BitUtils convertToBinary: 71];
+    NSMutableArray *res4 = [BitUtils convertToBinary: 121];
+    NSInteger num = [BitUtils convertToDecimal:res];
+    NSInteger num2 = [BitUtils convertToDecimal:res2];
+    NSInteger num3 = [BitUtils convertToDecimal:res3];
+    NSInteger num4 = [BitUtils convertToDecimal:res4];
+    
+    NSLog(@"NUM: %lu", num);
+    NSLog(@"NUM: %lu", num2);
+    NSLog(@"NUM: %lu", num3);
+    NSLog(@"NUM: %lu", num4);
+}
 
 -(void)testGraph
 {
@@ -55,20 +121,28 @@
 
 -(void)testQuicksort
 {
-    NSLog(@"Quicksort test");
-    Quicksort *q = [[Quicksort alloc] init];
+    
+    Quicksort *sort = [[Quicksort alloc] init];
     NSMutableArray *test = [Utils getRandomizedArray];
+    
+    NSMutableArray *sorted = [sort sort:test];;
+    
+    NSLog(@"%@", sorted);
     NSLog(@"%@", test);
-    test = [q quicksort:test];
-    NSLog(@"%@", test);
+    if(sorted.count != test.count)
+    {
+        //XCTAssertTrue(NO);
+        NSLog(@"%@", test);
+        NSLog(@"%@", sorted);
+        NSLog(@"%lu - %lu", test.count, sorted.count);
+    }
     
     
 }
 
 -(void)testMergesort
 {
-    Mergesort *sort = [[Mergesort alloc] init];
-    [sort test];
+    //Mergesort *sort = [[Mergesort alloc] init];
     
     
 }

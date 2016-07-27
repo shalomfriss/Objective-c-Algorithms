@@ -1,20 +1,20 @@
 //
-//  QuicksortTests.m
-//  FBTest
+//  ShellSortTests.m
+//  Objective-C Algorithms
 //
-//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/20/16.
+//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/27/16.
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "Quicksort.h"
+#import "ShellSort.h"
 #import "Utils.h"
 
-@interface QuicksortTests : XCTestCase
+@interface ShellSortTests : XCTestCase
 
 @end
 
-@implementation QuicksortTests
+@implementation ShellSortTests
 
 - (void)setUp {
     [super setUp];
@@ -26,13 +26,11 @@
     [super tearDown];
 }
 
--(void)testQuicksort
+- (void)testShellSort
 {
     
-    Quicksort *sort = [[Quicksort alloc] init];
+    ShellSort *sort = [[ShellSort alloc] init];
     NSMutableArray *items = [Utils getRandomizedArray];
-    
-    
     
     __block NSMutableArray *sorted;
     [self measureBlock:^{
@@ -63,7 +61,6 @@
     XCTAssert(YES);
     
 }
-
 
 
 @end

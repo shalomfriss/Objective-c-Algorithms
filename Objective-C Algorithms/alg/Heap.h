@@ -7,7 +7,6 @@
 }
 
 -(void)insert:(NSNumber *)item;
--(void)printme;
 -(NSNumber *)removeMin;
 
 @property (nonatomic, retain) NSMutableArray *heap;

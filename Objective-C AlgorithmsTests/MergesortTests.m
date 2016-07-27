@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Mergesort.h"
+#import "Utils.h"
 
 @interface MergesortTests : XCTestCase
 
@@ -25,22 +26,22 @@
     [super tearDown];
 }
 
--(void)testMergesortReturnsSameElementsInArray
+-(void)testMergesort
 {
+    
     Mergesort *sort = [[Mergesort alloc] init];
-    NSMutableArray *items = [[NSMutableArray alloc] init];
+    NSMutableArray *items = [Utils getRandomizedArray];
     
-    for(NSUInteger i = 0; i < 515; i += 7)
-    {
-        [items addObject:[NSNumber numberWithInteger:i]];
-    }
-    
-    NSArray *sorted = [sort mergesort:[items copy]];
+    __block NSMutableArray *sorted;
+    [self measureBlock:^{
+        sorted = [sort sort:items];
+    }];
     
     if(sorted.count != items.count)
     {
         XCTAssertTrue(NO);
     }
+    
     for(NSUInteger i = 0; i < items.count; i++)
     {
         if(![sorted containsObject:items[i]])
@@ -49,20 +50,6 @@
         }
     }
     
-    XCTAssert(YES);
-}
-
--(void)testMergesortReturnsSortedArray
-{
-    Mergesort *sort = [[Mergesort alloc] init];
-    NSMutableArray *items = [[NSMutableArray alloc] init];
-    
-    for(NSUInteger i = 0; i < 515; i += 7)
-    {
-        [items addObject:[NSNumber numberWithInteger:i]];
-    }
-    
-    NSArray *sorted = [sort mergesort:[items copy]];
     for(NSUInteger i = 0; i < sorted.count - 1; i++)
     {
         if(sorted[i] > sorted[i + 1])
@@ -70,20 +57,15 @@
             XCTAssertTrue(NO);
         }
     }
+    
+    XCTAssert(YES);
+    
 }
 
 
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+
+
 
 @end
