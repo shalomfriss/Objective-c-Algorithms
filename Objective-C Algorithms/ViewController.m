@@ -15,8 +15,8 @@
 #import "Graph.h"
 #import "Node.h"
 #import "Edge.h"
-
 #import "BitUtils.h"
+#import "MaxPath.h"
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -42,12 +42,41 @@
     //[self testBit];
     //[self testQuicksort];
     //[self testSelectionSort];
-    [self testInsertionSort];
-    
+    //[self testBitUtils];
+    [self testMaxPath];
 }
 
--(void)testInsertionSort
+-(void)testMaxPath
 {
+    NSMutableArray *items = [Utils getRandomizedBinaryTree];
+    
+    NSLog(@"%@", items);
+}
+
+-(void)testBitUtils
+{
+    
+    NSMutableArray *shouldEqualToThis = [@[@1, @1, @0, @1, @0, @0, @1] mutableCopy];
+    
+    __block NSMutableArray *bits;
+    
+    bits = [BitUtils convertToBinary:105];
+    NSLog(@"%@", bits);
+    
+    [BitUtils echo:bits];
+    [BitUtils echo: shouldEqualToThis];
+    
+    
+    for(NSInteger i = 0; i < bits.count; i++)
+    {
+        NSLog(@"%@ - %@", [bits[i] class], shouldEqualToThis[i]);
+        
+        if([bits[i] integerValue] != [shouldEqualToThis[i] integerValue])
+        {
+            //NSLog(@"NOT EQ: %lu - %lu", bits[i], shouldEqualToThis[i]);
+        }
+    }
+    
     
 }
 
@@ -104,6 +133,7 @@
     NSLog(@"NUM: %lu", num2);
     NSLog(@"NUM: %lu", num3);
     NSLog(@"NUM: %lu", num4);
+    
 }
 
 -(void)testGraph

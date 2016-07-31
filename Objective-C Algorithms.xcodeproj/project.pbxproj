@@ -14,6 +14,11 @@
 		E53129ED1D493641009C8C12 /* BubbleSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129EC1D493641009C8C12 /* BubbleSortTests.m */; };
 		E53129F01D4939C0009C8C12 /* ShellSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129EF1D4939C0009C8C12 /* ShellSort.m */; };
 		E53129F21D493E5D009C8C12 /* ShellSortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129F11D493E5D009C8C12 /* ShellSortTests.m */; };
+		E53129F41D496406009C8C12 /* BitUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129F31D496406009C8C12 /* BitUtilsTests.m */; };
+		E53129F81D4D6B9D009C8C12 /* MaxPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129F71D4D6B9D009C8C12 /* MaxPath.m */; };
+		E53129FA1D4D72AC009C8C12 /* MaxPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129F91D4D72AC009C8C12 /* MaxPathTests.m */; };
+		E53129FD1D4DD853009C8C12 /* FibonacciNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129FC1D4DD853009C8C12 /* FibonacciNumbers.m */; };
+		E53129FF1D4DDA61009C8C12 /* FibonacciNumbersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E53129FE1D4DDA61009C8C12 /* FibonacciNumbersTests.m */; };
 		E53E445D1D4101AA008A68CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445C1D4101AA008A68CA /* main.m */; };
 		E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E445F1D4101AA008A68CA /* AppDelegate.m */; };
 		E53E44631D4101AA008A68CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44621D4101AA008A68CA /* ViewController.m */; };
@@ -66,6 +71,13 @@
 		E53129EE1D4939C0009C8C12 /* ShellSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellSort.h; sourceTree = "<group>"; };
 		E53129EF1D4939C0009C8C12 /* ShellSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellSort.m; sourceTree = "<group>"; };
 		E53129F11D493E5D009C8C12 /* ShellSortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellSortTests.m; sourceTree = "<group>"; };
+		E53129F31D496406009C8C12 /* BitUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitUtilsTests.m; sourceTree = "<group>"; };
+		E53129F61D4D6B9D009C8C12 /* MaxPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MaxPath.h; path = problems/MaxPath.h; sourceTree = "<group>"; };
+		E53129F71D4D6B9D009C8C12 /* MaxPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MaxPath.m; path = problems/MaxPath.m; sourceTree = "<group>"; };
+		E53129F91D4D72AC009C8C12 /* MaxPathTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxPathTests.m; sourceTree = "<group>"; };
+		E53129FB1D4DD853009C8C12 /* FibonacciNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FibonacciNumbers.h; path = problems/FibonacciNumbers.h; sourceTree = "<group>"; };
+		E53129FC1D4DD853009C8C12 /* FibonacciNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FibonacciNumbers.m; path = problems/FibonacciNumbers.m; sourceTree = "<group>"; };
+		E53129FE1D4DDA61009C8C12 /* FibonacciNumbersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FibonacciNumbersTests.m; sourceTree = "<group>"; };
 		E53E44581D4101A9008A68CA /* Objective-C Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C Algorithms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53E445C1D4101AA008A68CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E53E445E1D4101AA008A68CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +166,17 @@
 			name = sorting;
 			sourceTree = "<group>";
 		};
+		E53129F51D4D6B88009C8C12 /* problems */ = {
+			isa = PBXGroup;
+			children = (
+				E53129F61D4D6B9D009C8C12 /* MaxPath.h */,
+				E53129F71D4D6B9D009C8C12 /* MaxPath.m */,
+				E53129FB1D4DD853009C8C12 /* FibonacciNumbers.h */,
+				E53129FC1D4DD853009C8C12 /* FibonacciNumbers.m */,
+			);
+			name = problems;
+			sourceTree = "<group>";
+		};
 		E53E444F1D4101A9008A68CA = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +200,7 @@
 		E53E445A1D4101AA008A68CA /* Objective-C Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				E53129F51D4D6B88009C8C12 /* problems */,
 				E53E44B61D4331CB008A68CA /* DebugUtils.h */,
 				E53E44B71D4331CB008A68CA /* DebugUtils.m */,
 				E53E448E1D4101C8008A68CA /* alg */,
@@ -212,6 +236,9 @@
 				E53129EC1D493641009C8C12 /* BubbleSortTests.m */,
 				E53129F11D493E5D009C8C12 /* ShellSortTests.m */,
 				E53E44771D4101AA008A68CA /* Info.plist */,
+				E53129F31D496406009C8C12 /* BitUtilsTests.m */,
+				E53129F91D4D72AC009C8C12 /* MaxPathTests.m */,
+				E53129FE1D4DDA61009C8C12 /* FibonacciNumbersTests.m */,
 			);
 			path = "Objective-C AlgorithmsTests";
 			sourceTree = "<group>";
@@ -420,11 +447,13 @@
 				E53E44631D4101AA008A68CA /* ViewController.m in Sources */,
 				E53E44A91D42A8AE008A68CA /* Node.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
+				E53129F81D4D6B9D009C8C12 /* MaxPath.m in Sources */,
 				E53129EB1D4935C3009C8C12 /* BubbleSort.m in Sources */,
 				E53129E21D49161D009C8C12 /* SelectionSort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
 				E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */,
 				E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */,
+				E53129FD1D4DD853009C8C12 /* FibonacciNumbers.m in Sources */,
 				E53E445D1D4101AA008A68CA /* main.m in Sources */,
 				E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */,
 				E53E44A11D4101F0008A68CA /* Utils.m in Sources */,
@@ -437,10 +466,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */,
+				E53129FF1D4DDA61009C8C12 /* FibonacciNumbersTests.m in Sources */,
 				E53129E81D492C80009C8C12 /* InsertionSortTests.m in Sources */,
 				E53E449B1D4101D6008A68CA /* HeapsortTests.m in Sources */,
+				E53129FA1D4D72AC009C8C12 /* MaxPathTests.m in Sources */,
 				E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */,
 				E53129E61D491A80009C8C12 /* SelectionSortTests.m in Sources */,
+				E53129F41D496406009C8C12 /* BitUtilsTests.m in Sources */,
 				E53129F21D493E5D009C8C12 /* ShellSortTests.m in Sources */,
 				E53129ED1D493641009C8C12 /* BubbleSortTests.m in Sources */,
 			);

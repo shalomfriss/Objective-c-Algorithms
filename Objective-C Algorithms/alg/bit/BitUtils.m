@@ -65,7 +65,7 @@
 +(NSMutableArray *)convertFractionToBinary:(NSNumber *)num
 {
     NSMutableArray *bits = [[NSMutableArray alloc] init];
-    float theNum = [num floatValue];
+    //float theNum = [num floatValue];
     
     
     return bits;
@@ -77,10 +77,8 @@
     NSMutableArray *bits = [[NSMutableArray alloc] init];
     float thenum = [num floatValue];
     
-    float integer = trunc(thenum);
-    float decimal = thenum - trunc(thenum);
-    
-    
+    //float integer = trunc(thenum);
+    //float decimal = thenum - trunc(thenum);
     
     return bits;
     

@@ -15,5 +15,6 @@
 
 +(void)shuffle:(NSMutableArray *)array;
 +(NSMutableArray *)getRandomizedArray;
++(NSMutableArray *)getRandomizedBinaryTree;
 
 @end

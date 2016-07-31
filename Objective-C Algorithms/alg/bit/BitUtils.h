@@ -17,5 +17,9 @@
 
 +(NSMutableArray *)convertToBinary:(NSInteger)num;
 +(NSInteger)convertToDecimal:(NSMutableArray *)bits;
++(void)echo:(NSMutableArray *)bits;
++(NSMutableArray *)convertFractionToBinary:(NSNumber *)num;
++(NSMutableArray *)convertFloatToBinary:(NSNumber *)num;
++(BOOL)hasPattern:(NSMutableArray *)bits;
 
 @end

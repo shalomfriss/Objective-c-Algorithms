@@ -33,4 +33,21 @@
     return items;
 }
 
++(NSMutableArray *)getRandomizedBinaryTree
+{
+    NSMutableArray<NSNumber *> *tree = [[NSMutableArray alloc] init];
+    NSInteger levels = 4;
+    tree[0] = [NSNumber numberWithInteger:-1];
+    for(NSInteger i = 0; i < levels; i++)
+    {
+        NSLog(@"%lu", i);
+        for(NSInteger j = pow(2, i); j < pow(2, i + 1) ; j++)
+        {
+            tree[j] = [NSNumber numberWithInteger: rand() * pow(2, levels + 1)];
+        }
+    }
+    
+    return tree;
+}
+
 @end
