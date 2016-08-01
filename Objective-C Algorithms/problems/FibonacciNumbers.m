@@ -21,7 +21,18 @@
         return 1;
     }
     
-    return [self nthFibo:fibo - 1] + [self nthFibo:fibo - 2];
+    NSUInteger F1 = 1;
+    NSUInteger F2 = 1;
+    NSUInteger temp;
+    
+    for(NSInteger i = 2; i <= fibo; i++)
+    {
+        temp = F1 + F2;
+        F1 = F2;
+        F2 = temp;
+        
+    }
+    return F2;
 }
 
 @end

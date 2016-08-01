@@ -48,9 +48,15 @@
 
 -(void)testMaxPath
 {
-    NSMutableArray *items = [Utils getRandomizedBinaryTree];
+    NSMutableArray<NSNumber *> *items = [Utils getRandomizedBinaryTree:4];
     
-    NSLog(@"%@", items);
+    /*
+    for(NSUInteger i = 0; i < items.count; i++)
+    {
+        NSNumber *num = items[i];
+        NSLog(@"-> %ld", (long)[num integerValue]);
+    }
+    */
 }
 
 -(void)testBitUtils
