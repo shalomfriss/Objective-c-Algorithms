@@ -22,4 +22,5 @@
 +(NSMutableArray *)convertFloatToBinary:(NSNumber *)num;
 +(BOOL)hasPattern:(NSMutableArray *)bits;
 
+
 @end

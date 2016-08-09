@@ -25,6 +25,7 @@
     
 }
 
+-(NSUInteger)findMax:(NSMutableArray<NSNumber *> *)items;
 
 
 @end

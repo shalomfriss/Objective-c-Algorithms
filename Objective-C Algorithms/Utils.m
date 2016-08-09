@@ -48,7 +48,7 @@
     
     [self shuffle:tree];
     
-    [self printBinaryTree:tree];
+    
     return tree;
 }
 
@@ -58,48 +58,83 @@
 +(void)printBinaryTree:(NSMutableArray *)tree
 {
     
-    NSUInteger padding = 5;
+    NSUInteger padding = 2;
     
     //The largest power of 2
     NSUInteger levels = log2(tree.count);
+    NSLog(@"Levels: %lu", levels);
     
-    //The largest integer we will be dealing with because 2^n + 2^n = 2*2^n = 2^(n+1)
-    NSUInteger largest = pow(2, levels) + pow(2, levels) - 1;
+    //The largest integer we will be dealing with
+    NSUInteger largest = pow(2, levels) - 1;
+    NSLog(@"Largest integer: %lu", largest);
     
+    //The amount of space we will need for each number to make the tree look even
     NSNumber *temp = [NSNumber numberWithUnsignedInteger:largest];
     NSString *temp2 = [temp stringValue];
-    //The amount of space we will need for each number to make the tree look even
     NSUInteger size = temp2.length;
+    NSLog(@"Max int length: %lu", size);
     
     NSUInteger totalWidth = (size + padding) * pow(2, levels - 1);
+    NSLog(@"Total width: %lu", totalWidth);
+    NSLog(@"Smallest: %lu - %ul",  pow(2, levels - 1), (totalWidth / pow(2, levels - 1)));
     
     NSUInteger count = 0;
     NSString *output = @"\n\n";
-    NSString *spaces = @"";
+    NSMutableArray *old = [[NSMutableArray alloc] init];
     for(NSUInteger i = 1; i < tree.count; i *= 2)
     {
-         NSLog(@"%u", i);
+        NSLog(@"%lu", i);
+        
+        NSMutableArray *new = [[NSMutableArray alloc] init];
         for(NSUInteger j = i; j < i*2; j++)
         {
-            NSLog(@"   %u", j);
-            NSUInteger width = totalWidth / ((i));
-            for(NSUInteger k = 0; k < width + 1; k++)
+            NSLog(@"   %lu", j);
+            
+            NSUInteger loc = (NSUInteger)(totalWidth / (i+1));
+            [new addObject:[NSNumber numberWithUnsignedInteger:loc]];
+            
+            for(NSUInteger k = 0; k < loc + 1; k++)
             {
                 output = [output stringByAppendingString:@"-"];
             }
             
-            //output = [output stringByAppendingString:[tree[count] stringValue]];
-            output = [output stringByAppendingString:@"ss"];
+            
+            //Compensate for single and small digit numbers
+            NSString *val = [tree[count] stringValue];
+            while(val.length < size)
+            {
+                val = [val stringByAppendingString:@" "];
+            }
+            
+            output = [output stringByAppendingString:val];
+            
+            /*
+            if(j % 2 == 0)
+            {
+                //output = [output stringByAppendingString:@"("];
+                output = [output stringByAppendingString:val];
+            }
+            else
+            {
+                output = [output stringByAppendingString:val];
+                //output = [output stringByAppendingString:@")"];
+            }
+            */
+            
+            old = [[NSMutableArray alloc] init];
             count++;
         }
+        
+        NSLog(@"TESTM");
+        NSLog(@"%@", new);
+        
+        
+        old = new;
         output = [output stringByAppendingString:@"\n"];
         
     }
     NSLog(@"%@\n\n", output);
     
-    NSLog(@"size: %ul", size);
-    NSLog(@"levels: %ul", levels);
-    NSLog(@"total size: %ul", tree.count);
     
     
 }

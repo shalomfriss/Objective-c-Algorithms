@@ -48,7 +48,33 @@
 
 -(void)testMaxPath
 {
-    NSMutableArray<NSNumber *> *items = [Utils getRandomizedBinaryTree:4];
+    //NSMutableArray<NSNumber *> *items = [Utils getRandomizedBinaryTree:5];
+    //[Utils printBinaryTree:items];
+    
+    NSMutableArray<NSNumber *> *items = [[NSMutableArray<NSNumber *> alloc] init];
+    items[0] = [NSNumber numberWithInteger:1];
+    
+    items[1] = [NSNumber numberWithInteger:2];
+    items[2] = [NSNumber numberWithInteger:3];
+    
+    items[3] = [NSNumber numberWithInteger:4];
+    items[4] = [NSNumber numberWithInteger:19];
+    items[5] = [NSNumber numberWithInteger:10];
+    items[6] = [NSNumber numberWithInteger:7];
+    
+    items[7] = [NSNumber numberWithInteger:7];
+    items[8] = [NSNumber numberWithInteger:7];
+    items[9] = [NSNumber numberWithInteger:7];
+    items[10] = [NSNumber numberWithInteger:7];
+    items[11] = [NSNumber numberWithInteger:10];
+    items[12] = [NSNumber numberWithInteger:11];
+    items[13] = [NSNumber numberWithInteger:7];
+    items[14] = [NSNumber numberWithInteger:7];
+    
+    
+    MaxPath *p = [[MaxPath alloc] init];
+    NSUInteger maxp = [p findMax:items];
+    NSLog(@"%lu", maxp);
     
     /*
     for(NSUInteger i = 0; i < items.count; i++)

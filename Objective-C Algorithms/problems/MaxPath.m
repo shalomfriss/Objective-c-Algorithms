@@ -11,19 +11,30 @@
 
 @implementation MaxPath
 
--(void)implicitHeapFind:(NSMutableArray *)items
-           currentIndex:(NSInteger)cIndex
-           currentTotal:(NSInteger)cTotal
-
+-(NSUInteger)findMax:(NSMutableArray<NSNumber *> *)items
 {
-    cTotal += (NSInteger)items[cIndex];
-    if(cIndex * 2 >= items.count)
+    NSUInteger max = 0;
+    for(NSUInteger i = 1; i < items.count + 1; i *= 2)
     {
-        NSLog(@"%ld", (long)cTotal);
-        return;
+        
+        if(!items[i])
+        {
+            continue;
+        }
+        
+        NSUInteger cmax = max;
+        for(NSUInteger j = i; j < i * 2; j++)
+        {
+            if(max + [items[j - 1] integerValue] > cmax)
+            {
+                cmax = max + [items[j - 1] integerValue];
+            }
+        }
+        max = cmax;
+        
     }
-    [self implicitHeapFind:items currentIndex:cIndex * 2 currentTotal:cTotal];
-    [self implicitHeapFind:items currentIndex:cIndex * 2 + 1 currentTotal:cTotal];
+    
+    return max;
 }
 
 @end

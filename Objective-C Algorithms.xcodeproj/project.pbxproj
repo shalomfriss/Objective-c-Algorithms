@@ -40,6 +40,7 @@
 		E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44B71D4331CB008A68CA /* DebugUtils.m */; };
 		E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BB1D46C96E008A68CA /* BitUtils.m */; };
 		E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BE1D47F291008A68CA /* InsertionSort.m */; };
+		E59CEFC61D5A2B9F00189BFC /* Knapsack.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFC51D5A2B9F00189BFC /* Knapsack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,10 +116,12 @@
 		E53E44B41D42AC82008A68CA /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graph.m; path = structures/graph/Graph.m; sourceTree = "<group>"; };
 		E53E44B61D4331CB008A68CA /* DebugUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugUtils.h; sourceTree = "<group>"; };
 		E53E44B71D4331CB008A68CA /* DebugUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugUtils.m; sourceTree = "<group>"; };
-		E53E44BA1D46C96E008A68CA /* BitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitUtils.h; path = bit/BitUtils.h; sourceTree = "<group>"; };
-		E53E44BB1D46C96E008A68CA /* BitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitUtils.m; path = bit/BitUtils.m; sourceTree = "<group>"; };
+		E53E44BA1D46C96E008A68CA /* BitUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitUtils.h; path = alg/bit/BitUtils.h; sourceTree = "<group>"; };
+		E53E44BB1D46C96E008A68CA /* BitUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitUtils.m; path = alg/bit/BitUtils.m; sourceTree = "<group>"; };
 		E53E44BD1D47F291008A68CA /* InsertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
 		E53E44BE1D47F291008A68CA /* InsertionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertionSort.m; sourceTree = "<group>"; };
+		E59CEFC41D5A2B9F00189BFC /* Knapsack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Knapsack.h; path = problems/Knapsack.h; sourceTree = "<group>"; };
+		E59CEFC51D5A2B9F00189BFC /* Knapsack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Knapsack.m; path = problems/Knapsack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				E53129F71D4D6B9D009C8C12 /* MaxPath.m */,
 				E53129FB1D4DD853009C8C12 /* FibonacciNumbers.h */,
 				E53129FC1D4DD853009C8C12 /* FibonacciNumbers.m */,
+				E59CEFC41D5A2B9F00189BFC /* Knapsack.h */,
+				E59CEFC51D5A2B9F00189BFC /* Knapsack.m */,
 			);
 			name = problems;
 			sourceTree = "<group>";
@@ -254,8 +259,8 @@
 		E53E448E1D4101C8008A68CA /* alg */ = {
 			isa = PBXGroup;
 			children = (
-				E53129DE1D480FC8009C8C12 /* sorting */,
 				E53E44A51D41C08C008A68CA /* structures */,
+				E53129DE1D480FC8009C8C12 /* sorting */,
 				E53E449E1D4101E6008A68CA /* utils */,
 			);
 			path = alg;
@@ -264,6 +269,8 @@
 		E53E449E1D4101E6008A68CA /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E53E44BA1D46C96E008A68CA /* BitUtils.h */,
+				E53E44BB1D46C96E008A68CA /* BitUtils.m */,
 				E53E449F1D4101F0008A68CA /* Utils.h */,
 				E53E44A01D4101F0008A68CA /* Utils.m */,
 			);
@@ -274,14 +281,13 @@
 		E53E44A51D41C08C008A68CA /* structures */ = {
 			isa = PBXGroup;
 			children = (
-				E53E448F1D4101C8008A68CA /* Heap.h */,
-				E53E44901D4101C8008A68CA /* Heap.m */,
-				E53E44B91D46C952008A68CA /* bit */,
-				E53E44A61D42A897008A68CA /* graph */,
 				E53E44AD1D42AB8B008A68CA /* Queue.h */,
 				E53E44AE1D42AB8B008A68CA /* Queue.m */,
 				E53E44B01D42AC69008A68CA /* Stack.h */,
 				E53E44B11D42AC69008A68CA /* Stack.m */,
+				E53E448F1D4101C8008A68CA /* Heap.h */,
+				E53E44901D4101C8008A68CA /* Heap.m */,
+				E53E44A61D42A897008A68CA /* graph */,
 			);
 			name = structures;
 			sourceTree = "<group>";
@@ -297,15 +303,6 @@
 				E53E44AB1D42A8BA008A68CA /* Edge.m */,
 			);
 			name = graph;
-			sourceTree = "<group>";
-		};
-		E53E44B91D46C952008A68CA /* bit */ = {
-			isa = PBXGroup;
-			children = (
-				E53E44BA1D46C96E008A68CA /* BitUtils.h */,
-				E53E44BB1D46C96E008A68CA /* BitUtils.m */,
-			);
-			name = bit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +438,7 @@
 				E53129F01D4939C0009C8C12 /* ShellSort.m in Sources */,
 				E53E44B51D42AC82008A68CA /* Graph.m in Sources */,
 				E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */,
+				E59CEFC61D5A2B9F00189BFC /* Knapsack.m in Sources */,
 				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
 				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
 				E53E44B81D4331CB008A68CA /* DebugUtils.m in Sources */,

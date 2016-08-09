@@ -30,7 +30,6 @@
         temp = F1 + F2;
         F1 = F2;
         F2 = temp;
-        
     }
     return F2;
 }
