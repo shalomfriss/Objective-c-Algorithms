@@ -17,6 +17,10 @@
 #import "Edge.h"
 #import "BitUtils.h"
 #import "MaxPath.h"
+#import "TreeBalanceCheck.h"
+#import "GNode.h"
+#import "GGraph.h"
+#import "PathExistenceInDirectedGraph.h"
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -43,7 +47,80 @@
     //[self testQuicksort];
     //[self testSelectionSort];
     //[self testBitUtils];
-    [self testMaxPath];
+    //[self testMaxPath];
+    //[self testTreeBalance];
+    [self testPathExists];
+}
+
+-(void)testPathExists
+{
+    NSMutableArray<GNode *> *nodes = [[NSMutableArray<GNode *> alloc] init];
+    for(NSUInteger i = 0; i < 30; i++)
+    {
+        GNode *node = [[GNode alloc] init];
+        [nodes addObject:node];
+    }
+    
+    [[nodes objectAtIndex:0].adjacentNodes addObject:[nodes objectAtIndex:1]];
+    [[nodes objectAtIndex:0].adjacentNodes addObject:[nodes objectAtIndex:2]];
+
+    [[nodes objectAtIndex:1].adjacentNodes addObject:[nodes objectAtIndex:3]];
+    [[nodes objectAtIndex:1].adjacentNodes addObject:[nodes objectAtIndex:4]];
+    [[nodes objectAtIndex:1].adjacentNodes addObject:[nodes objectAtIndex:5]];
+    
+    [[nodes objectAtIndex:2].adjacentNodes addObject:[nodes objectAtIndex:6]];
+    [[nodes objectAtIndex:2].adjacentNodes addObject:[nodes objectAtIndex:7]];
+    
+    [[nodes objectAtIndex:3].adjacentNodes addObject:[nodes objectAtIndex:8]];
+    [[nodes objectAtIndex:3].adjacentNodes addObject:[nodes objectAtIndex:9]];
+    [[nodes objectAtIndex:3].adjacentNodes addObject:[nodes objectAtIndex:10]];
+    [[nodes objectAtIndex:3].adjacentNodes addObject:[nodes objectAtIndex:11]];
+    
+    [[nodes objectAtIndex:11].adjacentNodes addObject:[nodes objectAtIndex:3]];
+    PathExistenceInDirectedGraph *g = [[PathExistenceInDirectedGraph alloc] init];
+    BOOL ex = [g pathExists:[nodes objectAtIndex:3] node2:[nodes objectAtIndex:19]];
+    if(ex == YES)
+    {
+        NSLog(@"YES");
+    }
+    else{
+        NSLog(@"NO");
+    }
+}
+
+-(void)testTreeBalance
+{
+    NSLog(@"Tree balance check");
+    NSMutableArray<NSNumber *> *items = [[NSMutableArray<NSNumber *> alloc] init];
+    items[0] = [NSNumber numberWithInteger:1];
+    
+    items[1] = [NSNumber numberWithInteger:2];
+    items[2] = [NSNumber numberWithInteger:3];
+    
+    items[3] = [NSNumber numberWithInteger:4];
+    items[4] = [NSNumber numberWithInteger:-1];
+    items[5] = [NSNumber numberWithInteger:10];
+    items[6] = [NSNumber numberWithInteger:7];
+    
+    items[7] = [NSNumber numberWithInteger:7];
+    items[8] = [NSNumber numberWithInteger:7];
+    items[9] = [NSNumber numberWithInteger:7];
+    items[10] = [NSNumber numberWithInteger:7];
+    items[11] = [NSNumber numberWithInteger:2];
+    items[12] = [NSNumber numberWithInteger:11];
+    items[13] = [NSNumber numberWithInteger:7];
+    items[14] = [NSNumber numberWithInteger:7];
+    
+    TreeBalanceCheck *c = [[TreeBalanceCheck alloc] init];
+    BOOL bal = [c isBalanced:items];
+    if(bal == YES)
+    {
+        NSLog(@"YES");
+    }
+    else{
+        NSLog(@"NO");
+    }
+    
 }
 
 -(void)testMaxPath

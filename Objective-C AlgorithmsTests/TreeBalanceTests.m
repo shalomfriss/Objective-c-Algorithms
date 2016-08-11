@@ -1,19 +1,19 @@
 //
-//  MaxPathTests.m
+//  TreeBalanceTests.m
 //  Objective-C Algorithms
 //
-//  Created by FRISS, SHALOM [AG-Contractor/1005] on 7/30/16.
+//  Created by FRISS, SHALOM [AG-Contractor/1005] on 8/10/16.
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "MaxPath.h"
+#import "TreeBalanceCheck.h"
 
-@interface MaxPathTests : XCTestCase
+@interface TreeBalanceTests : XCTestCase
 
 @end
 
-@implementation MaxPathTests
+@implementation TreeBalanceTests
 
 - (void)setUp {
     [super setUp];
@@ -25,12 +25,9 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
 
-- (void)testMaxPath {
+
+- (void)testTreeBalanceCheck {
     // This is an example of a performance test case.
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
@@ -42,7 +39,7 @@
         items[2] = [NSNumber numberWithInteger:3];
         
         items[3] = [NSNumber numberWithInteger:4];
-        items[4] = [NSNumber numberWithInteger:19];
+        items[4] = [NSNumber numberWithInteger:1];
         items[5] = [NSNumber numberWithInteger:10];
         items[6] = [NSNumber numberWithInteger:7];
         
@@ -50,16 +47,18 @@
         items[8] = [NSNumber numberWithInteger:7];
         items[9] = [NSNumber numberWithInteger:7];
         items[10] = [NSNumber numberWithInteger:7];
-        items[11] = [NSNumber numberWithInteger:10];
+        items[11] = [NSNumber numberWithInteger:2];
         items[12] = [NSNumber numberWithInteger:11];
         items[13] = [NSNumber numberWithInteger:7];
         items[14] = [NSNumber numberWithInteger:7];
         
-        
-        MaxPath *p = [[MaxPath alloc] init];
-        NSUInteger maxp = [p findMax:items];
-        
-        XCTAssert(maxp == 34);
+        TreeBalanceCheck *c = [[TreeBalanceCheck alloc] init];
+        BOOL bal = [c isBalanced:items];
+        XCTAssert(bal == YES);
+       
+        items[11] = [NSNumber numberWithInteger:-1];
+        bal = [c isBalanced:items];
+        XCTAssert(bal == NO);
         
     }];
 }

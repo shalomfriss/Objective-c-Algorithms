@@ -41,6 +41,11 @@
 		E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BB1D46C96E008A68CA /* BitUtils.m */; };
 		E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E53E44BE1D47F291008A68CA /* InsertionSort.m */; };
 		E59CEFC61D5A2B9F00189BFC /* Knapsack.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFC51D5A2B9F00189BFC /* Knapsack.m */; };
+		E59CEFC91D5AC49800189BFC /* TreeBalanceCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFC81D5AC49800189BFC /* TreeBalanceCheck.m */; };
+		E59CEFCB1D5C22A800189BFC /* TreeBalanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFCA1D5C22A800189BFC /* TreeBalanceTests.m */; };
+		E59CEFD21D5C245C00189BFC /* GNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFD11D5C245C00189BFC /* GNode.m */; };
+		E59CEFD51D5C246F00189BFC /* PathExistenceInDirectedGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFD41D5C246F00189BFC /* PathExistenceInDirectedGraph.m */; };
+		E59CEFD81D5C2B2600189BFC /* GGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFD71D5C2B2600189BFC /* GGraph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,15 @@
 		E53E44BE1D47F291008A68CA /* InsertionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertionSort.m; sourceTree = "<group>"; };
 		E59CEFC41D5A2B9F00189BFC /* Knapsack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Knapsack.h; path = problems/Knapsack.h; sourceTree = "<group>"; };
 		E59CEFC51D5A2B9F00189BFC /* Knapsack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Knapsack.m; path = problems/Knapsack.m; sourceTree = "<group>"; };
+		E59CEFC71D5AC49800189BFC /* TreeBalanceCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeBalanceCheck.h; path = problems/TreeBalanceCheck.h; sourceTree = "<group>"; };
+		E59CEFC81D5AC49800189BFC /* TreeBalanceCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeBalanceCheck.m; path = problems/TreeBalanceCheck.m; sourceTree = "<group>"; };
+		E59CEFCA1D5C22A800189BFC /* TreeBalanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeBalanceTests.m; sourceTree = "<group>"; };
+		E59CEFD01D5C245C00189BFC /* GNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GNode.h; path = problems/PathExistenceInDirectedGraph/GNode.h; sourceTree = "<group>"; };
+		E59CEFD11D5C245C00189BFC /* GNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GNode.m; path = problems/PathExistenceInDirectedGraph/GNode.m; sourceTree = "<group>"; };
+		E59CEFD31D5C246F00189BFC /* PathExistenceInDirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathExistenceInDirectedGraph.h; path = problems/PathExistenceInDirectedGraph/PathExistenceInDirectedGraph.h; sourceTree = "<group>"; };
+		E59CEFD41D5C246F00189BFC /* PathExistenceInDirectedGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PathExistenceInDirectedGraph.m; path = problems/PathExistenceInDirectedGraph/PathExistenceInDirectedGraph.m; sourceTree = "<group>"; };
+		E59CEFD61D5C2B2600189BFC /* GGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGraph.h; path = problems/PathExistenceInDirectedGraph/GGraph.h; sourceTree = "<group>"; };
+		E59CEFD71D5C2B2600189BFC /* GGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGraph.m; path = problems/PathExistenceInDirectedGraph/GGraph.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,12 +186,15 @@
 		E53129F51D4D6B88009C8C12 /* problems */ = {
 			isa = PBXGroup;
 			children = (
+				E59CEFCF1D5C243C00189BFC /* PathExitenceInDirectedGraph */,
 				E53129F61D4D6B9D009C8C12 /* MaxPath.h */,
 				E53129F71D4D6B9D009C8C12 /* MaxPath.m */,
 				E53129FB1D4DD853009C8C12 /* FibonacciNumbers.h */,
 				E53129FC1D4DD853009C8C12 /* FibonacciNumbers.m */,
 				E59CEFC41D5A2B9F00189BFC /* Knapsack.h */,
 				E59CEFC51D5A2B9F00189BFC /* Knapsack.m */,
+				E59CEFC71D5AC49800189BFC /* TreeBalanceCheck.h */,
+				E59CEFC81D5AC49800189BFC /* TreeBalanceCheck.m */,
 			);
 			name = problems;
 			sourceTree = "<group>";
@@ -244,6 +261,7 @@
 				E53129F31D496406009C8C12 /* BitUtilsTests.m */,
 				E53129F91D4D72AC009C8C12 /* MaxPathTests.m */,
 				E53129FE1D4DDA61009C8C12 /* FibonacciNumbersTests.m */,
+				E59CEFCA1D5C22A800189BFC /* TreeBalanceTests.m */,
 			);
 			path = "Objective-C AlgorithmsTests";
 			sourceTree = "<group>";
@@ -303,6 +321,19 @@
 				E53E44AB1D42A8BA008A68CA /* Edge.m */,
 			);
 			name = graph;
+			sourceTree = "<group>";
+		};
+		E59CEFCF1D5C243C00189BFC /* PathExitenceInDirectedGraph */ = {
+			isa = PBXGroup;
+			children = (
+				E59CEFD31D5C246F00189BFC /* PathExistenceInDirectedGraph.h */,
+				E59CEFD41D5C246F00189BFC /* PathExistenceInDirectedGraph.m */,
+				E59CEFD01D5C245C00189BFC /* GNode.h */,
+				E59CEFD11D5C245C00189BFC /* GNode.m */,
+				E59CEFD61D5C2B2600189BFC /* GGraph.h */,
+				E59CEFD71D5C2B2600189BFC /* GGraph.m */,
+			);
+			name = PathExitenceInDirectedGraph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +469,9 @@
 				E53129F01D4939C0009C8C12 /* ShellSort.m in Sources */,
 				E53E44B51D42AC82008A68CA /* Graph.m in Sources */,
 				E53E44BF1D47F291008A68CA /* InsertionSort.m in Sources */,
+				E59CEFD51D5C246F00189BFC /* PathExistenceInDirectedGraph.m in Sources */,
+				E59CEFC91D5AC49800189BFC /* TreeBalanceCheck.m in Sources */,
+				E59CEFD81D5C2B2600189BFC /* GGraph.m in Sources */,
 				E59CEFC61D5A2B9F00189BFC /* Knapsack.m in Sources */,
 				E53E44B21D42AC69008A68CA /* Stack.m in Sources */,
 				E53E44AC1D42A8BA008A68CA /* Edge.m in Sources */,
@@ -449,6 +483,7 @@
 				E53129EB1D4935C3009C8C12 /* BubbleSort.m in Sources */,
 				E53129E21D49161D009C8C12 /* SelectionSort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
+				E59CEFD21D5C245C00189BFC /* GNode.m in Sources */,
 				E53E44AF1D42AB8B008A68CA /* Queue.m in Sources */,
 				E53E44601D4101AA008A68CA /* AppDelegate.m in Sources */,
 				E53129FD1D4DD853009C8C12 /* FibonacciNumbers.m in Sources */,
@@ -466,6 +501,7 @@
 				E53E449C1D4101D6008A68CA /* MergesortTests.m in Sources */,
 				E53129FF1D4DDA61009C8C12 /* FibonacciNumbersTests.m in Sources */,
 				E53129E81D492C80009C8C12 /* InsertionSortTests.m in Sources */,
+				E59CEFCB1D5C22A800189BFC /* TreeBalanceTests.m in Sources */,
 				E53E449B1D4101D6008A68CA /* HeapsortTests.m in Sources */,
 				E53129FA1D4D72AC009C8C12 /* MaxPathTests.m in Sources */,
 				E53E449D1D4101D6008A68CA /* QuicksortTests.m in Sources */,
