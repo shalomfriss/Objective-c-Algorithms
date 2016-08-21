@@ -8,13 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+/*
+    A LIFO implementation
+*/
 @interface Stack : NSObject
 {
+    NSUInteger count;
+    NSUInteger index;
     NSMutableArray *items;
 }
 
 -(void)push:(id)item;
 -(id)pop;
 -(BOOL)hasItems;
+-(void)reset;
 
 @end

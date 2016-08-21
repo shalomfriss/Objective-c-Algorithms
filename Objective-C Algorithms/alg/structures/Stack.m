@@ -14,22 +14,32 @@
 {
     if(self = [super init])
     {
-        items = [[NSMutableArray alloc] init];
+        [self reset];
     }
     return self;
 }
 
+-(void)reset
+{
+    count = 0;
+    index = 0;
+    items = [[NSMutableArray alloc] init];
+}
+
 -(void)push:(id)item
 {
-    [items insertObject:item atIndex:0];
+    [items insertObject:item atIndex:count];
+    count++;
+    index = count - 1;
 }
 
 -(id)pop
 {
-    if(items.count > 0)
+    if(count > 0)
     {
-        id item = [items objectAtIndex:0];
-        [items removeObjectAtIndex:0];
+        id item = [items objectAtIndex:index];
+        count--;
+        index--;
         return item;
     }
     
@@ -38,7 +48,7 @@
 
 -(BOOL)hasItems
 {
-    return items.count > 0 ? YES : NO;
+    return count > 0 ? YES : NO;
 }
 
 @end

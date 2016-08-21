@@ -11,10 +11,11 @@
 
 /**
  Given a directed graph, design an algorithm to  nd out whether there is a route be- tween two nodes.
+ For simplicity, the assumption is made that only nodes that are in the right directions are in the 
+ adjacency list.
 */
 @interface PathExistenceInDirectedGraph : NSObject
 {
-    
     
 }
 

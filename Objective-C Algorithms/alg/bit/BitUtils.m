@@ -10,6 +10,73 @@
 
 @implementation BitUtils
 
+
++(NSUInteger)getBit:(NSUInteger)num index:(NSUInteger)i
+{
+    return ((num & (1 << i)) != 0 ? 1 : 0);
+}
+
++(NSUInteger)setBit:(NSUInteger)num index:(NSUInteger)i
+{
+    return (num | (1 << i));
+}
+
++(NSUInteger)clearBit:(NSUInteger)num index:(NSUInteger)i
+{
+    return (num & ~(1 << i));
+}
+
++(NSUInteger)updateBit:(NSUInteger)num index:(NSUInteger)i value:(NSUInteger)val
+{
+    if(val >= 1) val = 1; else val = 0;
+    NSUInteger mask = ~(1 << i);
+    return (num & mask) | (val << i);
+}
+
++(NSUInteger)clearBitsIThrough0:(NSUInteger)num index:(NSUInteger)i
+{
+    NSUInteger mask = (-1 << (i + 1));
+    return num & mask;
+}
+
+
++(NSUInteger)clearBitsMSThroughI:(NSUInteger)num index:(NSUInteger)i
+{
+    NSUInteger mask = (1 << i) - 1;
+    return num & mask;
+}
+
+/*
+    Clear bits starting from i and ending at j, here the assumption is that j > i
+*/
++(NSUInteger)clearBitsIThroughJ:(NSUInteger)num indexI:(NSUInteger)i indexJ:(NSUInteger)j
+{
+    NSUInteger mask = 0;
+    NSUInteger dist = j - i + 1;
+    
+    mask = ((1 << dist) - 1);
+    mask = (mask << i);
+    return num ^ mask;
+}
+
++(void)printNumber:(NSString *)binary
+{
+    
+}
+
+
++(void)printBinary:(NSUInteger)num
+{
+    NSMutableString *str = [NSMutableString stringWithFormat:@""];
+    while(num > 0)
+    {
+        [str insertString:((num & 1) ? @"1" : @"0") atIndex:0];
+        num >>= 1;
+    }
+    
+    NSLog(@"%lu: %@", num, str);
+}
+
 +(NSMutableArray *)convertToBinary:(NSInteger)num
 {
     NSMutableArray<NSNumber *> *bits = [[NSMutableArray<NSNumber *> alloc] init];

@@ -11,10 +11,13 @@
 @interface Queue : NSObject
 {
     NSMutableArray *items;
+    NSUInteger count;
+    NSUInteger index;
 }
 
 -(void)push:(id)item;
 -(id)pop;
 -(BOOL)hasItems;
+-(void)reset;
 
 @end

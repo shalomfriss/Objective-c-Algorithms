@@ -22,5 +22,14 @@
 +(NSMutableArray *)convertFloatToBinary:(NSNumber *)num;
 +(BOOL)hasPattern:(NSMutableArray *)bits;
 
++(NSUInteger)getBit:(NSUInteger)num index:(NSUInteger)i;
++(NSUInteger)setBit:(NSUInteger)num index:(NSUInteger)i;
++(NSUInteger)clearBit:(NSUInteger)num index:(NSUInteger)i;
++(NSUInteger)updateBit:(NSUInteger)num index:(NSUInteger)i value:(NSUInteger)val;
+
++(void)printBinary:(NSUInteger)num;
+
++(NSUInteger)clearBitsMSThroughI:(NSUInteger)num index:(NSUInteger)i;
++(NSUInteger)clearBitsIThroughJ:(NSUInteger)num indexI:(NSUInteger)i indexJ:(NSUInteger)j;
 
 @end

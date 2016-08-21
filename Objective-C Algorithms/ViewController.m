@@ -21,6 +21,11 @@
 #import "GNode.h"
 #import "GGraph.h"
 #import "PathExistenceInDirectedGraph.h"
+#import "CreateBTFromSortedArray.h"
+
+#import "BinaryTreeNode.h";
+#import "BinaryTree.h";
+#import "BitProblems.h";
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -49,8 +54,103 @@
     //[self testBitUtils];
     //[self testMaxPath];
     //[self testTreeBalance];
-    [self testPathExists];
+    //[self testPathExists];
+    //[self testInstaSort];
+    //[self testCreateBT];
+    
+    /*
+    NSUInteger temp = 1;
+    for(NSUInteger xx = 0; xx < 20; xx++)
+    {
+        temp = 11;
+    }
+    
+    temp = (1 << 9) - 1;
+    [BitUtils printBinary:temp];
+    temp = [BitUtils clearBitsIThroughJ:temp indexI:3 indexJ:5];
+    //temp = [BitUtils clearBit:temp index:3];
+    [BitUtils printBinary:temp];
+    */
+    
+    // Input: N 10000000000, M 10011, i 2, j 6 Output:N = 10001001100
+    
+    
+    BitProblems *p = [[BitProblems alloc] init];
+    
+    //NSUInteger n = 2048;
+    //NSUInteger m = 19;
+    //[BitUtils printBinary:[p insertBit:n M:m i:2 j:6]];
+    
+    
+    //[p printBinaryFractionToString:0.625];
+    //[p flipBit:1775];
+    
+    //11011101111 = 1775
+    [p printNextSmallestAndLargest:1775];
+    
 }
+
+-(void)testCreateBT
+{
+ 
+    BinaryTree *tree = [[BinaryTree alloc] init];
+    
+    for(NSUInteger i = 0; i < 16; i++)
+    {
+        BinaryTreeNode *node = [[BinaryTreeNode alloc] init];
+        node.value = i;
+        [tree insertNode:node];
+        
+        //[arr addObject:[NSNumber numberWithInteger:i]];
+    }
+    
+    [tree printTree];
+    
+    /*
+    CreateBTFromSortedArray *test = [[CreateBTFromSortedArray alloc] init];
+    
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    for(NSUInteger i = 0; i < 16; i++)
+    {
+        [arr addObject:[NSNumber numberWithInteger:i]];
+    }
+    
+    [test createBT:arr];
+     */
+}
+
+-(void)testInstaSort
+{
+    NSUInteger test[5];
+    NSUInteger sorted[5] = {0};
+    NSUInteger *t[10] = {0};
+    
+    test[0] = 2;
+    test[1] = 1;
+    test[2] = 9;
+    test[3] = 0;
+    test[4] = 4;
+    
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    
+    //Can assign directly
+    for(NSUInteger i = 0; i < sizeof(test)/sizeof(test[0]); i++)
+    {
+        *(t + test[i]) = &test[i];
+    }
+    
+    NSUInteger cnt = 0;
+    for(NSUInteger i = 0; i < sizeof(t)/sizeof(t[0]); i++)
+    {
+        if(t[i])
+        {
+            NSLog(@"%lu", *t[i]);
+            sorted[cnt] = *t[i];
+            cnt++;
+        }
+    }
+}
+
 
 -(void)testPathExists
 {
@@ -78,7 +178,7 @@
     
     [[nodes objectAtIndex:11].adjacentNodes addObject:[nodes objectAtIndex:3]];
     PathExistenceInDirectedGraph *g = [[PathExistenceInDirectedGraph alloc] init];
-    BOOL ex = [g pathExists:[nodes objectAtIndex:3] node2:[nodes objectAtIndex:19]];
+    BOOL ex = [g pathExists:[nodes objectAtIndex:3] node2:[nodes objectAtIndex:11]];
     if(ex == YES)
     {
         NSLog(@"YES");
