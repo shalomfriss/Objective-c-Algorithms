@@ -161,9 +161,7 @@
 {
     //To solve this, for the next smallest we unset the lowest bit then set bit closes to that one
     //for the largest we unset the largest bit and set the one closest to that one
-    
-    NSLog(@"The number");
-    [BitUtils printBinary:num];
+   
 
     NSUInteger count = 0;
     NSUInteger temp = num;
@@ -202,7 +200,6 @@
             
             if(smallIndexFound == NO)
             {
-                NSLog(@"Found smallest 1 at: %lu", i);
                 smallIndexFound = YES;
                 smallIndex = i;
             }
@@ -230,7 +227,6 @@
             
         }
         
-        //NSLog(@"%lu: %@", i, (bit > 0 ? @"1" : @"0"));
     }
     
     //Make sure we get a zero that isn't at the same location as the bit we set to zero
@@ -242,8 +238,7 @@
     NSUInteger temp2 = num;
     temp1 = temp1 & ~(1 << smallIndex);
     temp2 = temp2 & ~(1 << largeIndex);
-    NSLog(@"Next largest");
-    [BitUtils printBinary:temp2];
+   
     
     temp1 = temp1 | (1 << smallZeroIndex);      //The next smallest with the same bits
     temp2 = temp2 | (1 << largeZeroIndex);      //The next largest with the same bits

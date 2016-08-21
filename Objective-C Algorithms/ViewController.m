@@ -86,7 +86,7 @@
     //[p flipBit:1775];
     
     //11011101111 = 1775
-    [p printNextSmallestAndLargest:1775];
+    //[p printNextSmallestAndLargest:1775];
     
 }
 
