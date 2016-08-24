@@ -23,9 +23,9 @@
     
     [self DFS:self.root precessor:^(BTNode *node) {
         NSString *str = [NSString stringWithFormat:@"%@: %@ %@",
-                         (node ? [NSString stringWithFormat:@"%zd", node.value] : @"  "),
-                         (node.left ? [NSString stringWithFormat:@"%zd", node.left.value] : @"  "),
-                         (node.right ? [NSString stringWithFormat:@"%zd", node.right.value] : @"  ")];
+                         (node ? [NSString stringWithFormat:@"%zd", node.value] : @"x"),
+                         (node.left ? [NSString stringWithFormat:@"%zd", node.left.value] : @"x"),
+                         (node.right ? [NSString stringWithFormat:@"%zd", node.right.value] : @"x")];
         NSLog(@"%@", str);
         
         //NSLog(@"%zd: %zd  %zd", node ? node.value : -1, node.left ? node.left.value : -1, node.right ? node.right.value : -1);
