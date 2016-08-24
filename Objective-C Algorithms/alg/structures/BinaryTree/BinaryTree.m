@@ -92,6 +92,8 @@
         NSLog(@"kid with nil");
         rightChild.parent = node.parent;
         node.parent.left == node ? (node.parent.left = rightChild) : (node.parent.right = rightChild);
+        rightChild.left = node.left;
+        
         return;
     }
     
