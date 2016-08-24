@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BinaryTreeNode.h"
+#import "BTNode.h"
 #import "BinaryTree.h"
 
 /**

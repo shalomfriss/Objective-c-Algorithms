@@ -6,9 +6,9 @@
 //  Copyright © 2016 FRISS, SHALOM [AG-Contractor/1005]. All rights reserved.
 //
 
-#import "BinaryTreeNode.h"
+#import "BTNode.h"
 
-@implementation BinaryTreeNode
+@implementation BTNode
 
 
 @end

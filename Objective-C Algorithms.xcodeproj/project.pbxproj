@@ -43,7 +43,7 @@
 		E55CA0F71D5FFDE400BDEF99 /* InstaSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA0F61D5FFDE400BDEF99 /* InstaSort.m */; };
 		E55CA0FA1D60F67400BDEF99 /* KeyIndexedCounting.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA0F91D60F67400BDEF99 /* KeyIndexedCounting.m */; };
 		E55CA0FE1D612F2100BDEF99 /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA0FD1D612F2100BDEF99 /* BinaryTree.m */; };
-		E55CA1011D612F2E00BDEF99 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA1001D612F2E00BDEF99 /* BinaryTreeNode.m */; };
+		E55CA1011D612F2E00BDEF99 /* BTNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA1001D612F2E00BDEF99 /* BTNode.m */; };
 		E55CA1031D6411AD00BDEF99 /* StackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA1021D6411AD00BDEF99 /* StackTests.m */; };
 		E55CA1051D6416A000BDEF99 /* QueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55CA1041D6416A000BDEF99 /* QueueTests.m */; };
 		E59CEFC61D5A2B9F00189BFC /* Knapsack.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFC51D5A2B9F00189BFC /* Knapsack.m */; };
@@ -54,6 +54,8 @@
 		E59CEFD81D5C2B2600189BFC /* GGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFD71D5C2B2600189BFC /* GGraph.m */; };
 		E59CEFDF1D5E3B4800189BFC /* CreateBTFromSortedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = E59CEFDE1D5E3B4800189BFC /* CreateBTFromSortedArray.m */; };
 		E5C99C8E1D68E58E002390F8 /* BitProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C99C8D1D68E58E002390F8 /* BitProblems.m */; };
+		E5C99C921D6A4B86002390F8 /* TreeGraphProblems.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C99C911D6A4B86002390F8 /* TreeGraphProblems.m */; };
+		E5C99C951D6A4FCA002390F8 /* InstaSortItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C99C941D6A4FCA002390F8 /* InstaSortItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +141,8 @@
 		E55CA0F91D60F67400BDEF99 /* KeyIndexedCounting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyIndexedCounting.m; path = sorting/KeyIndexedCounting.m; sourceTree = "<group>"; };
 		E55CA0FC1D612F2100BDEF99 /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTree.h; path = structures/BinaryTree/BinaryTree.h; sourceTree = "<group>"; };
 		E55CA0FD1D612F2100BDEF99 /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTree.m; path = structures/BinaryTree/BinaryTree.m; sourceTree = "<group>"; };
-		E55CA0FF1D612F2E00BDEF99 /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTreeNode.h; path = structures/BinaryTree/BinaryTreeNode.h; sourceTree = "<group>"; };
-		E55CA1001D612F2E00BDEF99 /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTreeNode.m; path = structures/BinaryTree/BinaryTreeNode.m; sourceTree = "<group>"; };
+		E55CA0FF1D612F2E00BDEF99 /* BTNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BTNode.h; path = structures/BinaryTree/BTNode.h; sourceTree = "<group>"; };
+		E55CA1001D612F2E00BDEF99 /* BTNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BTNode.m; path = structures/BinaryTree/BTNode.m; sourceTree = "<group>"; };
 		E55CA1021D6411AD00BDEF99 /* StackTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackTests.m; sourceTree = "<group>"; };
 		E55CA1041D6416A000BDEF99 /* QueueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueueTests.m; sourceTree = "<group>"; };
 		E59CEFC41D5A2B9F00189BFC /* Knapsack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Knapsack.h; path = problems/Knapsack.h; sourceTree = "<group>"; };
@@ -158,6 +160,10 @@
 		E59CEFDE1D5E3B4800189BFC /* CreateBTFromSortedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateBTFromSortedArray.m; path = problems/CreateBTFromSortedArray.m; sourceTree = "<group>"; };
 		E5C99C8C1D68E58E002390F8 /* BitProblems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BitProblems.h; path = problems/bit/BitProblems.h; sourceTree = "<group>"; };
 		E5C99C8D1D68E58E002390F8 /* BitProblems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BitProblems.m; path = problems/bit/BitProblems.m; sourceTree = "<group>"; };
+		E5C99C901D6A4B86002390F8 /* TreeGraphProblems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TreeGraphProblems.h; path = problems/TreesGraphs/TreeGraphProblems.h; sourceTree = "<group>"; };
+		E5C99C911D6A4B86002390F8 /* TreeGraphProblems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TreeGraphProblems.m; path = problems/TreesGraphs/TreeGraphProblems.m; sourceTree = "<group>"; };
+		E5C99C931D6A4FCA002390F8 /* InstaSortItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstaSortItem.h; path = sorting/InstaSortItem.h; sourceTree = "<group>"; };
+		E5C99C941D6A4FCA002390F8 /* InstaSortItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstaSortItem.m; path = sorting/InstaSortItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,8 @@
 				E53129EF1D4939C0009C8C12 /* ShellSort.m */,
 				E55CA0F51D5FFDE400BDEF99 /* InstaSort.h */,
 				E55CA0F61D5FFDE400BDEF99 /* InstaSort.m */,
+				E5C99C931D6A4FCA002390F8 /* InstaSortItem.h */,
+				E5C99C941D6A4FCA002390F8 /* InstaSortItem.m */,
 				E55CA0F81D60F67400BDEF99 /* KeyIndexedCounting.h */,
 				E55CA0F91D60F67400BDEF99 /* KeyIndexedCounting.m */,
 			);
@@ -212,6 +220,7 @@
 		E53129F51D4D6B88009C8C12 /* problems */ = {
 			isa = PBXGroup;
 			children = (
+				E5C99C8F1D6A4B6B002390F8 /* TreesGraphs */,
 				E5C99C881D68B4E6002390F8 /* bit */,
 				E59CEFCF1D5C243C00189BFC /* PathExitenceInDirectedGraph */,
 				E53129F61D4D6B9D009C8C12 /* MaxPath.h */,
@@ -360,8 +369,8 @@
 			children = (
 				E55CA0FC1D612F2100BDEF99 /* BinaryTree.h */,
 				E55CA0FD1D612F2100BDEF99 /* BinaryTree.m */,
-				E55CA0FF1D612F2E00BDEF99 /* BinaryTreeNode.h */,
-				E55CA1001D612F2E00BDEF99 /* BinaryTreeNode.m */,
+				E55CA0FF1D612F2E00BDEF99 /* BTNode.h */,
+				E55CA1001D612F2E00BDEF99 /* BTNode.m */,
 			);
 			name = BinaryTree;
 			sourceTree = "<group>";
@@ -386,6 +395,15 @@
 				E5C99C8D1D68E58E002390F8 /* BitProblems.m */,
 			);
 			name = bit;
+			sourceTree = "<group>";
+		};
+		E5C99C8F1D6A4B6B002390F8 /* TreesGraphs */ = {
+			isa = PBXGroup;
+			children = (
+				E5C99C901D6A4B86002390F8 /* TreeGraphProblems.h */,
+				E5C99C911D6A4B86002390F8 /* TreeGraphProblems.m */,
+			);
+			name = TreesGraphs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,8 +554,10 @@
 				E53E44A91D42A8AE008A68CA /* Node.m in Sources */,
 				E53E44971D4101C8008A68CA /* Quicksort.m in Sources */,
 				E53129F81D4D6B9D009C8C12 /* MaxPath.m in Sources */,
+				E5C99C951D6A4FCA002390F8 /* InstaSortItem.m in Sources */,
 				E55CA0FA1D60F67400BDEF99 /* KeyIndexedCounting.m in Sources */,
 				E53129EB1D4935C3009C8C12 /* BubbleSort.m in Sources */,
+				E5C99C921D6A4B86002390F8 /* TreeGraphProblems.m in Sources */,
 				E53129E21D49161D009C8C12 /* SelectionSort.m in Sources */,
 				E53E44961D4101C8008A68CA /* Mergesort.m in Sources */,
 				E59CEFD21D5C245C00189BFC /* GNode.m in Sources */,
@@ -547,7 +567,7 @@
 				E53E445D1D4101AA008A68CA /* main.m in Sources */,
 				E53E44BC1D46C96E008A68CA /* BitUtils.m in Sources */,
 				E53E44A11D4101F0008A68CA /* Utils.m in Sources */,
-				E55CA1011D612F2E00BDEF99 /* BinaryTreeNode.m in Sources */,
+				E55CA1011D612F2E00BDEF99 /* BTNode.m in Sources */,
 				E53E44951D4101C8008A68CA /* Heap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

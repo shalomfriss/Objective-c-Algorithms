@@ -14,31 +14,132 @@
 
 -(void)printTree
 {
+    if(self.root == nil)
+    {
+        NSLog(@"Empty tree");
+        return;
+    }
     
-    [self DFS:self.root precessor:^(BinaryTreeNode *node) {
-        NSLog(@"%lu: %lu  %lu", node ? node.value : 0, node.left ? node.left.value : 0, node.right ? node.right.value : 0);
+    
+    [self DFS:self.root precessor:^(BTNode *node) {
+        NSString *str = [NSString stringWithFormat:@"%@: %@ %@",
+                         (node ? [NSString stringWithFormat:@"%zd", node.value] : @"  "),
+                         (node.left ? [NSString stringWithFormat:@"%zd", node.left.value] : @"  "),
+                         (node.right ? [NSString stringWithFormat:@"%zd", node.right.value] : @"  ")];
+        NSLog(@"%@", str);
+        
+        //NSLog(@"%zd: %zd  %zd", node ? node.value : -1, node.left ? node.left.value : -1, node.right ? node.right.value : -1);
+        
     }];
     
 }
 
-
--(void)insertNode:(BinaryTreeNode *)node
+-(void)findNode:(BTNode *)node
 {
-    BinaryTreeNode *curNode = self.root;
+    
+}
+
+
+-(void)generateRandom:(NSUInteger)numberOfNodes
+{
+    NSMutableArray<BTNode *> *items = [[NSMutableArray<BTNode *> alloc] init];
+    for(NSUInteger i = 0; i < numberOfNodes; i++)
+    {
+        BTNode *node = [[BTNode alloc] init];
+        node.value = i;
+        [items addObject:node];
+    }
+    
+    for (NSUInteger i = items.count; i > 1; i--)
+    {
+        [items exchangeObjectAtIndex:i - 1 withObjectAtIndex:arc4random_uniform((u_int32_t)i)];
+    }
+    
+    for(NSUInteger i = 0; i < 16; i++)
+    {
+        [self insertNode:[items objectAtIndex:i]];
+    }
+}
+
+-(void)deleteNode:(BTNode *)node
+{
+    NSLog(@"Delete: %lu", node.value);
+    if(node.left == nil && node.right == nil)
+    {
+        node.parent.left == node ? (node.parent.left = nil) : (node.parent.right = nil);
+        return;
+    }
+    
+    if(node.left == nil)
+    {
+        node.parent.left == node ? (node.parent.left = node.right) : (node.parent.right = node.right);
+        return;
+    }
+    
+    if(node.right == nil)
+    {
+        node.parent.left == node ? (node.parent.left = node.left) : (node.parent.right = node.left);
+        return;
+    }
+    
+    NSLog(@"two kids");
+    //get the right child
+    BTNode *rightChild = node.right;
+    
+    //if there is no left child use the right child itself as the replacement
+    if(rightChild.left == nil)
+    {
+        NSLog(@"kid with nil");
+        rightChild.parent = node.parent;
+        node.parent.left == node ? (node.parent.left = rightChild) : (node.parent.right = rightChild);
+        return;
+    }
+    
+    NSLog(@"2 children");
+    //get the left most node of the right child
+    while(rightChild.left != nil)
+    {
+        rightChild = rightChild.left;
+    }
+    
+    //unlink right child from its parent (the node we're deleting)
+    rightChild.parent.left == rightChild ? (rightChild.parent.left = nil) : (rightChild.parent.right = nil);
+    
+    //Set the right child of the node to remove as this nodes right child
+    rightChild.right = node.right;
+    rightChild.left = node.left;
+    
+    //Set the new parent
+    rightChild.parent = node.parent;
+    
+    //Set the new reference to our new node
+    node.parent.left == node ? (node.parent.left = rightChild) : (node.parent.right = rightChild);
+    
+}
+
+-(void)insertNode:(BTNode *)node
+{
+    BTNode *curNode = self.root;
     if(curNode == nil)
     {
         self.root = node;
         return;
     }
     
-    NSLog(@"Inserting");
+    
+    BTNode *parent;
     while(curNode != nil)
     {
-        if(node.value < curNode.value)
+        if(node.value <= curNode.value)
         {
             if(curNode.left == nil)
             {
+                if(curNode.value == node.value)
+                {
+                    return;
+                }
                 curNode.left = node;
+                node.parent = curNode;
                 return;
             }
             curNode = curNode.left;
@@ -47,7 +148,12 @@
         {
             if(curNode.right == nil)
             {
+                if(curNode.value == node.value)
+                {
+                    return;
+                }
                 curNode.right = node;
+                node.parent = curNode;
                 return;
             }
             curNode = curNode.right;
@@ -56,7 +162,7 @@
     
 }
 
--(void)printNode:(BinaryTreeNode *)node
+-(void)printNode:(BTNode *)node
 {
     if(node != nil)
     {
@@ -64,37 +170,48 @@
     }
 }
 
--(void)BFS:(BinaryTreeNode *)node precessor:(void (^)(BinaryTreeNode *))proc
+-(void)BFS:(BTNode *)node precessor:(void (^)(BTNode *))proc
 {
     Queue *q = [[Queue alloc] init];
     [q push:node];
     
     while(q.hasItems == YES)
     {
-        BinaryTreeNode *temp = [q pop];
+        //NSLog(@"Printing");
+        
+        BTNode *temp = [q pop];
         //[self printNode:temp];
         proc(temp);
+        NSLog(@"%@", temp.left);
+        NSLog(@"%@", temp.right);
+        
+        if(temp.left != nil)
         [q push:temp.left];
+        if(temp.right != nil)
         [q push:temp.right];
     }
 }
 
--(void)DFS:(BinaryTreeNode *)node precessor:(void (^)(BinaryTreeNode *))proc
+-(void)DFS:(BTNode *)node precessor:(void (^)(BTNode *))proc
 {
+    
     Stack *q = [[Stack alloc] init];
     [q push:node];
     
     while(q.hasItems == YES)
     {
-        BinaryTreeNode *temp = [q pop];
+        BTNode *temp = [q pop];
         //[self printNode:temp];
         proc(temp);
-        [q push:temp.left];
-        [q push:temp.right];
+        if(temp.left != nil)
+            [q push:temp.left];
+        if(temp.right != nil)
+            [q push:temp.right];
+
     }
 }
 
--(void)preorderTraverse:(BinaryTreeNode *)node precessor:(void (^)(BinaryTreeNode *))proc
+-(void)preorderTraverse:(BTNode *)node precessor:(void (^)(BTNode *))proc
 {
     if(node != nil)
     {
@@ -104,7 +221,7 @@
     }
 }
 
--(void)inorderTraverse:(BinaryTreeNode *)node
+-(void)inorderTraverse:(BTNode *)node
 {
     if(node != nil)
     {
@@ -114,7 +231,7 @@
     }
 }
 
--(void)postorderTraverse:(BinaryTreeNode *)node
+-(void)postorderTraverse:(BTNode *)node
 {
     if(node != nil)
     {
@@ -127,9 +244,9 @@
 
 
 //Get all the nodes for a certain level starting at 1
--(NSMutableArray<BinaryTreeNode *> *)getNodesAtLevel:(NSUInteger)level
+-(NSMutableArray<BTNode *> *)getNodesAtLevel:(NSUInteger)level
 {
-    NSMutableArray<BinaryTreeNode *> *result = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+    NSMutableArray<BTNode *> *result = [[NSMutableArray<BTNode *> alloc] init];
                                                 
     Stack *s = [[Stack alloc] init];
     NSUInteger cl = 1;
@@ -139,7 +256,7 @@
     while(s.hasItems == YES)
     {
         
-        BinaryTreeNode *node = (BinaryTreeNode *)[s pop];
+        BTNode *node = (BTNode *)[s pop];
         [s push:node.left];
         cl++;
         [s push:node.right];

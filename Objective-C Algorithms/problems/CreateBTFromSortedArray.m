@@ -16,11 +16,11 @@
     
     
     BinaryTree *tree = [[BinaryTree alloc] init];
-    BinaryTreeNode *root = [[BinaryTreeNode alloc] init];
+    BTNode *root = [[BTNode alloc] init];
     root.value = [items[0] integerValue];
     tree.root = root;
     
-    NSMutableArray<BinaryTreeNode *> *cur = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+    NSMutableArray<BTNode *> *cur = [[NSMutableArray<BTNode *> alloc] init];
     for(NSUInteger i = 1; i < items.count + 1; i *= 2)
     {
         if(i == 1)
@@ -33,18 +33,18 @@
         
         
         NSLog(@"i: %lu", i);
-        NSMutableArray<BinaryTreeNode *> *new = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+        NSMutableArray<BTNode *> *new = [[NSMutableArray<BTNode *> alloc] init];
         for(NSUInteger j = i; j < i * 2; j++)
         {
-            BinaryTreeNode *temp = [[BinaryTreeNode alloc] init];
+            BTNode *temp = [[BTNode alloc] init];
             temp.value = [[items objectAtIndex:j - 1] integerValue];
             [new addObject:temp];
             
             NSUInteger index = (j/2) % (i/2);
             NSLog(@"parent: %lu", index);
-            BinaryTreeNode *old = [cur objectAtIndex:index];
+            BTNode *old = [cur objectAtIndex:index];
             
-            NSMutableArray<BinaryTreeNode *> *levelNodes = [tree getNodesAtLevel:i];
+            NSMutableArray<BTNode *> *levelNodes = [tree getNodesAtLevel:i];
             NSLog(@"NDOES: %lu", levelNodes.count);
             
             if(index % 2 == 0)
@@ -62,22 +62,22 @@
     
     /*
     BinaryTree *tree = [[BinaryTree alloc] init];
-    BinaryTreeNode *root = [[BinaryTreeNode alloc] init];
+    BTNode *root = [[BTNode alloc] init];
     root.value = [items[0] integerValue];
     
-    //NSMutableArray<BinaryTreeNode *> *cur = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+    //NSMutableArray<BTNode *> *cur = [[NSMutableArray<BTNode *> alloc] init];
     //[cur addObject:root];
     
-    NSMutableArray<BinaryTreeNode *> *old = [[NSMutableArray<BinaryTreeNode *> alloc] init];
-    NSMutableArray<BinaryTreeNode *> *new = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+    NSMutableArray<BTNode *> *old = [[NSMutableArray<BTNode *> alloc] init];
+    NSMutableArray<BTNode *> *new = [[NSMutableArray<BTNode *> alloc] init];
     
     for(NSUInteger i = 1; i < items.count; i *= 2)
     {
-        new = [[NSMutableArray<BinaryTreeNode *> alloc] init];
+        new = [[NSMutableArray<BTNode *> alloc] init];
         for(NSUInteger j = i; j < 2*i; j++)
         {
             
-            BinaryTreeNode *temp = [[BinaryTreeNode alloc] init];
+            BTNode *temp = [[BTNode alloc] init];
             temp.value = [items[i - 1] integerValue];
             [new addObject:temp];
             
@@ -88,7 +88,7 @@
             }
             
             NSLog(@"%lu", j/2);
-            BinaryTreeNode *node = [old objectAtIndex:(j - 1)/2];
+            BTNode *node = [old objectAtIndex:(j - 1)/2];
             if(j % 2 == 0)
             {
                 node.left = temp;

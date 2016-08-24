@@ -7,24 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BinaryTreeNode.h"
+#import "BTNode.h"
 
 @interface BinaryTree : NSObject
 {
     
 }
 
-@property (nonatomic, strong) BinaryTreeNode *root;
--(NSMutableArray<BinaryTreeNode *> *)getNodesAtLevel:(NSUInteger)level;
+@property (nonatomic, strong) BTNode *root;
+-(NSMutableArray<BTNode *> *)getNodesAtLevel:(NSUInteger)level;
 -(void)resetVisited;
 
--(void)insertNode:(BinaryTreeNode *)node;
--(void)printNode:(BinaryTreeNode *)node;
--(void)BFS:(BinaryTreeNode *)node;
--(void)DFS:(BinaryTreeNode *)node;
--(void)preorderTraverse:(BinaryTreeNode *)node;
--(void)inorderTraverse:(BinaryTreeNode *)node;
--(void)postorderTraverse:(BinaryTreeNode *)node;
+-(void)insertNode:(BTNode *)node;
+-(void)printNode:(BTNode *)node;
+-(void)BFS:(BTNode *)node;
+-(void)DFS:(BTNode *)node;
+-(void)preorderTraverse:(BTNode *)node;
+-(void)inorderTraverse:(BTNode *)node;
+-(void)postorderTraverse:(BTNode *)node;
 -(void)printTree;
+-(void)deleteNode:(BTNode *)node;
 
 @end

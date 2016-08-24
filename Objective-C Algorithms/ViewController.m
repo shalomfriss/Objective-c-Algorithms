@@ -22,10 +22,12 @@
 #import "GGraph.h"
 #import "PathExistenceInDirectedGraph.h"
 #import "CreateBTFromSortedArray.h"
+#import "BTNode.h"
+#import "BinaryTree.h"
+#import "BitProblems.h"
+#import "InstaSort.h"
+#import "InstaSortItem.h";
 
-#import "BinaryTreeNode.h";
-#import "BinaryTree.h";
-#import "BitProblems.h";
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -75,7 +77,7 @@
     // Input: N 10000000000, M 10011, i 2, j 6 Output:N = 10001001100
     
     
-    BitProblems *p = [[BitProblems alloc] init];
+    //BitProblems *p = [[BitProblems alloc] init];
     
     //NSUInteger n = 2048;
     //NSUInteger m = 19;
@@ -88,22 +90,46 @@
     //11011101111 = 1775
     //[p printNextSmallestAndLargest:1775];
     
+    [self testCreateBT];
+    //[self testInstaSort];
+    
 }
+
 
 -(void)testCreateBT
 {
  
     BinaryTree *tree = [[BinaryTree alloc] init];
     
+    NSMutableArray<BTNode *> *items = [[NSMutableArray<BTNode *> alloc] init];
+    
+    BTNode *temp;
     for(NSUInteger i = 0; i < 16; i++)
     {
-        BinaryTreeNode *node = [[BinaryTreeNode alloc] init];
+        BTNode *node = [[BTNode alloc] init];
         node.value = i;
-        [tree insertNode:node];
-        
-        //[arr addObject:[NSNumber numberWithInteger:i]];
+        [items addObject:node];
+        if(i == 3)
+        {
+            NSLog(@"NODE7: %lu", node.value);
+            temp = node;
+        }
+        //[tree insertNode:node];
     }
     
+    for (NSUInteger i = items.count; i > 1; i--)
+    {
+        [items exchangeObjectAtIndex:i - 1 withObjectAtIndex:arc4random_uniform((u_int32_t)i)];
+    }
+    
+    for(NSUInteger i = 0; i < 16; i++)
+    {
+        [tree insertNode:[items objectAtIndex:i]];
+    }
+    
+    [tree printTree];
+    
+    [tree deleteNode:temp];
     [tree printTree];
     
     /*
@@ -121,6 +147,25 @@
 
 -(void)testInstaSort
 {
+    NSMutableArray<InstaSortItem *> *sortItems = [[NSMutableArray<InstaSortItem *> alloc] init];
+    
+    for(NSUInteger i = 0; i < 10; i++)
+    {
+        InstaSortItem *item = [[InstaSortItem alloc] init];
+        item.key = i;
+        item.value = [NSString stringWithFormat:@"STR:%lu", i];
+        [sortItems addObject:item];
+    }
+    for (NSUInteger i = sortItems.count; i > 1; i--)
+    {
+        [sortItems exchangeObjectAtIndex:i - 1 withObjectAtIndex:arc4random_uniform((u_int32_t)i)];
+    }
+    
+    InstaSort *i = [[InstaSort alloc] init];
+    [i sort:sortItems];
+    return;
+    
+    
     NSUInteger test[5];
     NSUInteger sorted[5] = {0};
     NSUInteger *t[10] = {0};
