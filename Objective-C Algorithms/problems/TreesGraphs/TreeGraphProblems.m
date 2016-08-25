@@ -8,7 +8,9 @@
 
 #import "TreeGraphProblems.h"
 #import "BinaryTree.h"
-#import "BTNode.h";
+#import "BTNode.h"
+#import "Queue.h"
+
 
 @implementation TreeGraphProblems
 
@@ -32,6 +34,69 @@
     return temp;
 }
 
+/*
+    Given a binary tree create a linked list of all nodes at each depth.  If you have a tree of depth
+    D you will have D linked lists
+ */
+-(NSMutableArray *)createDepthLists:(BinaryTree *)tree
+{
+    
+    NSMutableArray *lists = [[NSMutableArray alloc] init];
+    [lists insertObject:[[NSMutableArray alloc] init] atIndex:0];
+    NSMutableArray *cArray = [lists objectAtIndex:0];
+    [cArray addObject:tree.root];
+    
+    Queue *q = [[Queue alloc] init];
+    Queue *q2 = [[Queue alloc] init];
+    
+    
+    [q push:tree.root];
+    
+    NSInteger cnt = 1;
+    
+    while(YES)
+    {
+        if([lists objectAtIndex:cnt] == nil)
+        {
+            [lists insertObject:[[NSMutableArray alloc] init] atIndex:cnt];
+        }
+        
+        NSMutableArray *cArray = [lists objectAtIndex:cnt];
+        BTNode *node;
+        
+        while([q hasItems])
+        {
+            node = (BTNode *)[q pop];
+            [q2 push:node.left];
+            [q2 push:node.right];
+        }
+        
+        while([q2 hasItems])
+        {
+            node = [q2 pop];
+            [q push:node];
+            [cArray addObject:node];
+        }
+        
+        if([q hasItems] == NO && [q2 hasItems] == NO)
+        {
+            break;
+        }
+        cnt++;
+    }
+    
+    [q reset];
+    [q2 reset];
+    
+    
+    return lists;
+}
 
+
+
+-(void)checkBalanced
+{
+    
+}
 
 @end
