@@ -7,6 +7,8 @@
 //
 
 #import "TreeGraphProblems.h"
+#import "BinaryTree.h"
+#import "BTNode.h";
 
 @implementation TreeGraphProblems
 
@@ -17,9 +19,19 @@
 -(void)minimalTree:(NSMutableArray *)items
 {
     NSUInteger mid = items.count/2;
-    
+    BinaryTree *bt = [[BinaryTree alloc] init];
     
 }
+
+-(BTNode *)arrange:(BTNode *)node items:(NSMutableArray *)arr l:(NSUInteger)left r:(NSUInteger)right
+{
+    BTNode *temp = [[BTNode alloc] init];
+    NSUInteger mid = arr.count/2;
+    
+    
+    return temp;
+}
+
 
 
 @end
