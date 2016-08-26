@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Graph.h"
+#import "BinaryTree.h"
+
 @interface TreeGraphProblems : NSObject
 {
     
 }
 
 -(void)minimalTree:(NSMutableArray *)items;
+-(NSMutableArray *)createDepthLists:(BinaryTree *)tree;
+-(BOOL)checkBalanced:(BinaryTree *)tree;
+
 
 @end

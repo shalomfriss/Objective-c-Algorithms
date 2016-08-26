@@ -30,9 +30,9 @@
     BTNode *temp = [[BTNode alloc] init];
     NSUInteger mid = arr.count/2;
     
-    
     return temp;
 }
+
 
 /*
     Given a binary tree create a linked list of all nodes at each depth.  If you have a tree of depth
@@ -40,6 +40,8 @@
  */
 -(NSMutableArray *)createDepthLists:(BinaryTree *)tree
 {
+    
+    [tree printTree];
     
     NSMutableArray *lists = [[NSMutableArray alloc] init];
     [lists insertObject:[[NSMutableArray alloc] init] atIndex:0];
@@ -56,10 +58,15 @@
     
     while(YES)
     {
-        if([lists objectAtIndex:cnt] == nil)
+        NSLog(@"Go");
+        if(lists.count < cnt + 1)
         {
-            [lists insertObject:[[NSMutableArray alloc] init] atIndex:cnt];
+            NSLog(@"Create array");
+            //[lists insertObject:[[NSMutableArray alloc] init] atIndex:cnt];
+            [lists addObject:[[NSMutableArray alloc] init]];
         }
+        
+        NSLog(@"Array created");
         
         NSMutableArray *cArray = [lists objectAtIndex:cnt];
         BTNode *node;
@@ -67,7 +74,9 @@
         while([q hasItems])
         {
             node = (BTNode *)[q pop];
+            if(node.left)
             [q2 push:node.left];
+            if(node.right)
             [q2 push:node.right];
         }
         
@@ -94,9 +103,66 @@
 
 
 
--(void)checkBalanced
+/*
+    Check if a binary tree is balanced (a tree such that the heights of the two subtrees of any node never differ 
+    by more then one)
+ */
+-(BOOL)checkBalanced:(BinaryTree *)tree
+{
+    return [self isBalanced:tree.root];
+    
+}
+
+-(BOOL)isBalanced:(BTNode *)node
 {
     
+    NSInteger left = [self getHeight:node.left];
+    NSInteger right = [self getHeight:node.right];
+    if(abs(left - right) > 1)
+    {
+        return NO;
+    }
+    
+    BOOL leftb = [self isBalanced:node.left];
+    BOOL rightb = [self isBalanced:node.right];
+    
+    if(!leftb || !rightb) return NO;
+    return YES;
+}
+
+-(NSInteger)getHeight:(BTNode *)node
+{
+    
+    Queue *q1 = [[Queue alloc] init];
+    Queue *q2 = [[Queue alloc] init];
+    
+    [q1 push:node];
+    NSInteger cnt = 1;
+    while(YES)
+    {
+        [q2 reset];
+        while([q1 hasItems] == YES)
+        {
+            BTNode *node = [q1 pop];
+            if(node.left)
+                [q2 push:node.left];
+            if(node.right)
+                [q2 push: node.right];
+        }
+        
+        [q1 reset];
+        while([q2 hasItems] == YES)
+        {
+            [q1 push:[q2 pop]];
+        }
+        cnt++;
+        if([q1 hasItems] == NO && [q2 hasItems] == NO)
+        {
+            return cnt;
+        }
+    }
+    
+    return cnt;
 }
 
 @end

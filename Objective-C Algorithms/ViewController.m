@@ -26,8 +26,8 @@
 #import "BinaryTree.h"
 #import "BitProblems.h"
 #import "InstaSort.h"
-#import "InstaSortItem.h";
-
+#import "InstaSortItem.h"
+#import "TreeGraphProblems.h"
 
 #define mut(aname) NSMutableArray *aname = [[NSMutableArray alloc] init];
 /*
@@ -98,8 +98,42 @@
 
 -(void)testCreateBT
 {
+    BinaryTree *tree = [[BinaryTree alloc] init];
+    [tree generateRandom:16];
     
     
+    NSLog(@"Genrated");
+    
+    TreeGraphProblems *t = [[TreeGraphProblems alloc] init];
+    BOOL bal = [t checkBalanced:tree];
+    if(!bal)
+    {
+        NSLog(@"NOT BALANCED");
+    }
+    else{
+        NSLog(@"BALANCED");
+        return;
+    }
+    
+    NSMutableArray *temp = [t createDepthLists:tree];
+    
+    for(NSInteger i = 0; i < temp.count; i++)
+    {
+        NSMutableArray *t2 = [temp objectAtIndex:i];
+        NSString *str = @"";
+        for(NSInteger j = 0; j < t2.count; j++)
+        {
+            BTNode *node = [t2 objectAtIndex:j];
+            str = [str stringByAppendingFormat:@"%lu", node.value];
+        }
+        NSLog(@"%@", str);
+    }
+    NSLog(@"%@", temp);
+    
+    return;
+    
+    
+    /*
     BinaryTree *tree = [[BinaryTree alloc] init];
     
     NSMutableArray<BTNode *> *items = [[NSMutableArray<BTNode *> alloc] init];
@@ -132,6 +166,10 @@
     
     [tree deleteNode:temp];
     [tree printTree];
+    */
+    
+    
+    
     
     /*
     CreateBTFromSortedArray *test = [[CreateBTFromSortedArray alloc] init];

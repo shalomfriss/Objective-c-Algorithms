@@ -27,5 +27,6 @@
 -(void)postorderTraverse:(BTNode *)node;
 -(void)printTree;
 -(void)deleteNode:(BTNode *)node;
+-(void)generateRandom:(NSUInteger)numberOfNodes;
 
 @end
